@@ -15,7 +15,7 @@ A project that sets up an active directory domain controller in a virtual enviro
 
 <h2>Environments Used </h2>
 
-- <b>Virtual Box</b> 
+- <b>Oracle Virtual Box</b> 
 - <b>Windows 10 ISO</b> 
 - <b>Windows Server 2019 ISO</b>
 
