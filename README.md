@@ -11,7 +11,7 @@ A project that sets up an active directory domain controller in a virtual enviro
 <h2>Languages and Utilities Used</h2>
 
 - <b>PowerShell ISE</b> 
-- <b>Random Generator Script</b>
+- <b>Powershell Random Generator Script</b>
 
 <h2>Environments Used </h2>
 
