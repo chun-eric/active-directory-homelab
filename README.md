@@ -877,70 +877,158 @@ Awesome!
 <h3>Step 4 - Creating 1000 Random Fake Active Directory Users with Powershell</h3>
 <br/>
 <br/>
+Before we create our Client VM
+We will create a whole bunch of fake random users with a Powershell Script
+We now need to access the internet for the Server
+As it is a home lab environment we can configure the server to access the internet but usually we wouldn’t do 
+that in a production environment
+
+
+
+In Server Manager Dashboard 
+
+Click Configure this local server.
 <br/>
 <a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="99" border="0" /></a>
 <br/>
 <br/>
+
 <br/>
 <br/>
 <a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="100" border="0" /></a>
 <br/>
 <br/>
+IE Enhanced Security Configuration > Off
 <br/>
 <br/>
 <a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="101" border="0" /></a>
 <br/>
 <br/>
+Go to the internet and download the zipped script file
+Save it on desktop and extract it on the desktop
 <br/>
 <br/>
 <a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="102" border="0" /></a>
 <br/>
 <br/>
+Inside the folder we see the scripts and the names txt file. 
+The names text file has around 1000 generated names but in text file format
 <br/>
 <br/>
 <a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="103" border="0" /></a>
 <br/>
 <br/>
+Next we have to go PowerShell ISE (integrated Scripting Environment)
+and run as adminstrator.
 <br/>
 <br/>
 <a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="104" border="0" /></a>
 <br/>
 <br/>
+Open the PowerShell Script > 1_CREATE_USERS
 <br/>
 <br/>
 <a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="105" border="0" /></a>
 <br/>
 <br/>
+Now our script has opened
 <br/>
 <br/>
 <a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="106" border="0" /></a>
 <br/>
 <br/>
+Before we run anything we have to enable the execution of all scripts
+If I try to run the script now 
+we get an error
 <br/>
 <br/>
 <a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="107" border="0" /></a>
 <br/>
 <br/>
+We need to change the execution policy for PowerShell scripts on a system
+It’s a security feature in PowerShell that determines whether scripts are allowed to run and what kind of scripts are allowed
+
+Type > Set-ExecutionPolicy Unrestricted 
+We change the user preference for PowerShell script execution policy
+and allow PowerShell scripts to run without restrictions
+
+Click > Yes to All
 <br/>
 <br/>
 <a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="108" border="0" /></a>
 <br/>
 <br/>
+Explaining the code
+
+Setting Variables
+$PASSWORD_FOR_USERS   = "Password1"
+This line initializes a variable named $PASSWORD_FOR_USERS and assigns the string "Password1" to it. This will be the default password for all users created later in the script.
+
+$USER_FIRST_LAST_LIST = Get-Content .\names.txt
+This line reads the content of a file named names.txt and stores it in the variable $USER_FIRST_LAST_LIST. Each line in the file is expected to contain a first name and a last name separated by a space.
+
+$password = ConvertTo-SecureString $PASSWORD_FOR_USERS -AsPlainText -Force
+This line converts the plain text password stored in $PASSWORD_FOR_USERS into a secure string and assigns it to the variable $password. This is done to securely handle passwords in PowerShell.
+
+New-ADOrganizationalUnit -Name _USERS -ProtectedFromAccidentalDeletion $false
+This line creates a new Active Directory Organizational Unit (OU) named "_USERS" with the parameter -ProtectedFromAccidentalDeletion set to $false. This OU will be the container for the new user accounts.
+
+
+foreach ($n in $USER_FIRST_LAST_LIST) {
+This line starts a foreach loop that iterates through each line in the $USER_FIRST_LAST_LIST variable, where each line is expected to contain a first name and a last name separated by a space. That is it will iterate through each user in the list
+
+    $first = $n.Split(" ")[0].ToLower()
+    $last = $n.Split(" ")[1].ToLower()
+These lines split the current line from the loop into first and last names using a space as the delimiter. The resulting names are converted to lowercase and stored in the variables $first and $last.
+
+    $username = "$($first.Substring(0,1))$($last)".ToLower()
+This line creates a username by taking the first letter of the first name and appending it to the last name. The resulting username is converted to lowercase and stored in the variable $username.
+
+    Write-Host "Creating user: $($username)" -BackgroundColor Black -ForegroundColor Cyan
+This line prints a message to the console indicating the username that is currently being created. The background color is set to black, and the foreground color is set to cyan for visual formatting
+
+    New-AdUser -AccountPassword $password `
+               -GivenName $first `
+               -Surname $last `
+               -DisplayName $username `
+               -Name $username `
+               -EmployeeID $username `
+               -PasswordNeverExpires $true `
+               -Path "ou=_USERS,$(([ADSI]`"").distinguishedName)" `
+               -Enabled $true
+This line creates a new Active Directory user using the New-AdUser cmdlet. It sets various properties such as the account password, given name, surname, display name, name, employee ID, and other attributes. The user account is placed in the "_USERS" OU, and the account is enabled (-Enabled $true).
+
+
+
+Now that we understand general gist of the code. 
+We need to cd into the directory of the names.txt file
+
 <br/>
 <br/>
-<a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="109" border="0" /></a>
+<a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="109a" border="0" /></a>
 <br/>
 <br/>
+Check with ls command
+<br/>
+<a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="109b" border="0" /></a>
+<br/>
+<br/>
+
+Now all we need to do is run the script
+Now you can see it running the script and creating users
 <br/>
 <br/>
 <a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="110" border="0" /></a>
 <br/>
 <br/>
+If we check our Active Directory and our Domain
+We can see that our _USERS folders have been created with other 1000 users inside it
 <br/>
 <br/>
 <a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="111" border="0" /></a>
 <br/>
 <br/>
+If we search for Robert Lee we can see that our user has been created.
 <br/>
 <br/>
 <a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="112" border="0" /></a>
@@ -951,89 +1039,127 @@ Awesome!
 
 
 
+
+
 <br>
 </br>
 <h3>Step 5 - Enabling User Entity Behavior Analytics and Playbooks  </h3>
 <br/>
+Go through the same process of creating a VM but for Windows 10 Pro ISO
 <br/>
 <a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="113" border="0" /></a>
 <br/>
 <br/>
+We will set our Network > Internal Network
 <br/>
 <br/>
 <a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="114" border="0" /></a>
 <br/>
 <br/>
+Choose Windows 10 Pro
+Custom Install
 <br/>
 <br/>
 <a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="115" border="0" /></a>
 <br/>
 <br/>
+Input user to this PC
 <br/>
 <br/>
 <a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="116" border="0" /></a>
 <br/>
 <br/>
+No password
 <br/>
 <br/>
 <a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="117" border="0" /></a>
 <br/>
 <br/>
+Now we are logged into our Window 10 Client
 <br/>
 <br/>
 <a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="118" border="0" /></a>
 <br/>
 <br/>
+Now to see if we are connected to the internet
+Go to cmd
+type > ipconfig
+
+If you can see default gateway address the same as the DC IP address of 172.16.0.1 then we are all connected!
+
 <br/>
 <br/>
 <a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="119" border="0" /></a>
 <br/>
 <br/>
+Lets ping our domain mydomain.com
+
+Everything seems to be working! Woohoo!
 <br/>
 <br/>
 <a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="120" border="0" /></a>
 <br/>
 <br/>
+Lets also change the name of the computer
+system > Rename this PC (advanced)
 <br/>
 <br/>
 <a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="121" border="0" /></a>
 <br/>
 <br/>
+ Click > Change
+
+Change Computer Name > CLIENT1
+Member of Domain: 
 <br/>
 <br/>
 <a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="122" border="0" /></a>
 <br/>
 <br/>
+our admin username and password robert lee
 <br/>
 <br/>
 <a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="123" border="0" /></a>
 <br/>
 <br/>
+If you go back to our Server Manager Dashboard > DHCP
+We can see under IPv4 > Scope > Address Leases> CLIENT1.mydomain 
+
+There is our CLIENT1 machine being leased
 <br/>
 <br/>
 <a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="124" border="0" /></a>
 <br/>
 <br/>
+Our new computer is also showing in our Active Directory Users and Computers within the DC
 <br/>
 <br/>
 <a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="125" border="0" /></a>
 <br/>
 <br/>
+Lets logout and login as one of our other users in our CLIENT1 machine
+Click Other user
 <br/>
 <br/>
 <a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="126" border="0" /></a>
 <br/>
 <br/>
+Lets sign in as one of the random users we created
+
+acoke
+Password1
 <br/>
 <br/>
 <a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="127" border="0" /></a>
 <br/>
 <br/>
+We are logged into as the new user!
 <br/>
 <br/>
 <a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="128" border="0" /></a>
 <br/>
 <br/>
+We can also connect to the internet.
 <br/>
 <br/>
 <a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="129" border="0" /></a>
@@ -1043,7 +1169,19 @@ Awesome!
 
 
 
+<br>
+</br>
+<h3>Step 6 - Project Conclusion and Summary</h3>
+<br/>
+This project would replicate a mini corporate network for a small to medium sized business.
+Imagine a new staff being hired, we create a new user via a script, assign a new account through a Domain Controller.
+The new higher would login with their corporate credentials onto a laptop in the domain we created. 
+All internet traffic is directed through domain controller. 
 
+What a great project.
+<br/>
+<br/>
+<br/>
 
 
 
