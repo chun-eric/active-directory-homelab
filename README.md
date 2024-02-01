@@ -21,7 +21,6 @@ A project that sets up an active directory domain controller in a virtual enviro
 
 <h2>Project walk-through:</h2>
 <h3>High Level Overview</h3>
-<br/>
 The below diagram represents what the goal of our project is.
 <br/>
 <br/>
@@ -62,37 +61,46 @@ We will login using one of our domain accounts
 <br/>
 <br/>
 Okay that’s a high level overview. Lets get into the details.
-
-
+<br/>
+<br/>
 
 
 
 <h3>Step 1 - Setting up our Environment</h3>
-Download Virtual Box
-Download Windows 10
-Download Windows server 2019 - fill out some details
+Download Virtual Box, Windows 10 and Windows server 2019. We need to fill out some details in Virtual Box.
 <br/>
 <br/>
 Create the VM. First the Domain Controller (Server 2019)
 <br/>
+<br/>
 <a href="https://ibb.co/5xB3sjB"><img src="https://i.ibb.co/x8JbzgJ/2.png" alt="2" border="0"></a>
 <br/>
-Currently I skipped the Unattended Install
+<br/>
+ I skipped the Unattended Install intentionally for now.
+<br/>
 <br/>
 <a href="https://ibb.co/MkyVXTm"><img src="https://i.ibb.co/s9pwBSZ/3a.png" alt="3a" border="0"></a>
+<br/>
 <a href="https://ibb.co/qdJR5Tq"><img src="https://i.ibb.co/QfD6dyS/3b.png" alt="3b" border="0"></a>
+<br/>
 <a href="https://ibb.co/j50xgGc"><img src="https://i.ibb.co/MhwjMpY/4.png" alt="4" border="0"></a>
+<br/>
 <a href="https://ibb.co/fNqxb3v"><img src="https://i.ibb.co/NNtyX0S/5.png" alt="5" border="0"></a>
+<br/>
 
 We need to add two Network Adapters. 1st is NAT.
 <br/>
+<br/>
 <a href="https://ibb.co/P1W7d7v"><img src="https://i.ibb.co/wpQ9f9F/6.png" alt="6" border="0"></a>
 <br/>
+<br/>
 Second Adapter is Internal.
+<br/>
 <br/>
 <a href="https://ibb.co/w7kxq89"><img src="https://i.ibb.co/nBG5y4H/7.png" alt="7" border="0"></a>
 <br/>
 Installing the VM.
+<br/>
 <br/>
 <a href="https://ibb.co/wgwGJ33"><img src="https://i.ibb.co/MSGw8WW/8.png" alt="8" border="0"></a>
 <br/>
@@ -105,15 +113,17 @@ Click > Next
 ```
 <a href="https://ibb.co/ZhZthDq"><img src="https://i.ibb.co/qRZXRQT/9.png" alt="9" border="0"></a>
 <br/>
+<br/>
 After installing add password.
+<br/>
 <a href="https://ibb.co/QmTbVXp"><img src="https://i.ibb.co/NYJVq7t/10.png" alt="10" border="0"></a>
 <br/>
 <br/>
-Open with:
+Open Windows by holding:
 ```
 Ctrl + Alt + Delete
 ```
-got to:
+Go to:
 ```
 Input > Insert Ctrl + Alt + Delete
 ```
@@ -128,9 +138,14 @@ We want other PCs to be discoverable on this network.
 <a href="https://ibb.co/WtrHJRJ"><img src="https://i.ibb.co/Srk6CZC/12.png" alt="12" border="0"></a>
 <br/>
 <br/>
-To get rid of the lag and to allow the VM to resize properly 
-we need to add guest box additions images
-Go to this PC > click on Drive D
+To get rid of the lag and to allow the VM to resize properly, we will need to add the Guest Box additions Images.
+<br/>
+Go to:
+```
+This PC > click on Drive D
+```
+<br/>
+<br/>
 <a href="https://ibb.co/1v2hq7t"><img src="https://i.ibb.co/mDz1qbV/13.png" alt="13" border="0"></a>
 <br/>
 <br/>
@@ -145,11 +160,12 @@ Click > Install
 <br/>
 Reboot later. However Shut the VM down.
 <br/>
+<br/>
 <a href="https://ibb.co/418TN2t"><img src="https://i.ibb.co/fDkp09F/15.png" alt="15" border="0"></a>
 <br/>
 <br/>
-<br/>
 Login to Windows again.
+<br/>
 <br/>
 <a href="https://ibb.co/9GwDY1r"><img src="https://i.ibb.co/WsDhKM2/16.png" alt="16" border="0"></a>
 <br/>
@@ -166,46 +182,54 @@ Go to Settings > Ethernet > Change adapter options
 <br/>
 <br/>
 Rename the network to the correct NIC.
+<br/>
 ```
 Right Click > Status > Details
 ```
+<br/>
 <br/>
 <a href="https://ibb.co/TvdcZQH"><img src="https://i.ibb.co/C1DBqjn/18.png" alt="18" border="0"></a>
 <a href="https://ibb.co/m06ZGH5"><img src="https://i.ibb.co/zFG9rSV/19.png" alt="19" border="0"></a>
 <br/>
 <br/>
-This looks like our NIC 1 IP address
-Usually start with a 10
+This looks like our 1st NIC's IP address. It will usually start with a number 10.
+<br/>
+<br/>
 <a href="https://ibb.co/m08hyNq"><img src="https://i.ibb.co/cwL28YF/20.png" alt="20" border="0"></a>
 <br/>
 <br/>
+Right click the second adapter. We know this is the second NIC as it has a IPv4 Autoconfiguration.
 <br/>
-Right click the second adapter. We know this is NIC2 the internal adapter
+<br/>
 <a href="https://ibb.co/R9MgSWd"><img src="https://i.ibb.co/zrLm5wD/21.png" alt="21" border="0"></a>
 <br/>
 <br/>
-Lets appropriately rename each NIC
+Lets rename each NIC to make things easier for us.
+<br/>
+<br/>
 <a href="https://ibb.co/kxT2HxC"><img src="https://i.ibb.co/nbyMgbJ/22.png" alt="22" border="0"></a>
 <br/>
 <br/>
-<br/>
-Lets Assign our IP address to NIC2 adapter
-right click properties > 
+Lets Assign our IP address to NIC2 adapter:
+```
+Right click > Properties
+```  
 <a href="https://ibb.co/L0Ns7Pm"><img src="https://i.ibb.co/51KJH9m/23.png" alt="23" border="0"></a>
 <br/>
 <br/>
-<br/>
 Double click on IPv4
+<br/>
+<br/>
 <a href="https://ibb.co/4SkQwPH"><img src="https://i.ibb.co/t2Rdw89/24.png" alt="24" border="0"></a>
 <br/>
 <br/>
+Default gateway is left blank because this NIC doesn’t use a Default gateway.
 <br/>
-We are not getting into IP addressing in this video, 
-Default gateway is left blank because this NIC doesn’t use a Default gateway
-
-When you install Active Directory it automatically installs DNS Server
+<br/>
+When you install Active Directory it automatically installs DNS Server.
+<br/>
 You can either use the same IP address in the Preferred DNS Server or you can add a loop back address 
-which is 127.0.0.1
+which is 127.0.0.1.
 A loopback address is something that refers to yourself.
 So if you ping the above loop back address it will ping yourself. Interesting….
 
