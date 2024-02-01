@@ -105,28 +105,31 @@ Installing the VM.
 <br/>
 <a href="https://ibb.co/wgwGJ33"><img src="https://i.ibb.co/MSGw8WW/8.png" alt="8" border="0"></a>
 <br/>
-```
+<br/>
 Choose Custom Install.
-```
+<br/>
 ```
 Click > Next
 ```
 <a href="https://ibb.co/ZhZthDq"><img src="https://i.ibb.co/qRZXRQT/9.png" alt="9" border="0"></a>
 <br/>
 <br/>
-After installing add password.
+After installing, type your password.
 <br/>
 <a href="https://ibb.co/QmTbVXp"><img src="https://i.ibb.co/NYJVq7t/10.png" alt="10" border="0"></a>
 <br/>
 <br/>
 Open Windows by holding:
+<br/>
 ```
 Ctrl + Alt + Delete
 ```
+<br/>
 Go to:
 ```
 Input > Insert Ctrl + Alt + Delete
 ```
+<br/>
 or else you wont be able to unlock.
 <a href="https://ibb.co/ZhS7W6b"><img src="https://i.ibb.co/19Mj8f4/11.png" alt="11" border="0"></a>
 <br/>
@@ -134,13 +137,16 @@ or else you wont be able to unlock.
 ```
 Click > Yes
 ```
+<br/>
 We want other PCs to be discoverable on this network.
 <a href="https://ibb.co/WtrHJRJ"><img src="https://i.ibb.co/Srk6CZC/12.png" alt="12" border="0"></a>
 <br/>
 <br/>
 To get rid of the lag and to allow the VM to resize properly, we will need to add the Guest Box additions Images.
 <br/>
+<br/>
 Go to:
+<br/>
 ```
 This PC > click on Drive D
 ```
@@ -172,14 +178,16 @@ Now setup our IP Addresses for the Domain Controller. Remember we have 2 NICs.
 The first NICs IP address will be automatically set via DHCP.
 The 2nd NIC will have to assign the IP Address, Default Gateway.
 <br/>
+<br/>
 ```
-Go to Settings > Ethernet > Change adapter options
+Go to Settings > Ethernet > Change adapter options.
 ```
 <br/>
 <a href="https://ibb.co/GdsF0yn"><img src="https://i.ibb.co/CwJWzgm/17.png" alt="17" border="0"></a>
 <br/>
 <br/>
 Rename the network to the correct NIC.
+<br/>
 <br/>
 ```
 Right Click > Status > Details
@@ -191,31 +199,31 @@ Right Click > Status > Details
 <br/>
 <br/>
 This looks like our 1st NIC's IP address. It will usually start with a number 10.
-<br/>
 <a href="https://ibb.co/m08hyNq"><img src="https://i.ibb.co/cwL28YF/20.png" alt="20" border="0"></a>
 <br/>
 <br/>
 Right click the second adapter. We know this is the second NIC as it has a IPv4 Autoconfiguration.
-<br/>
 <br/>
 <a href="https://ibb.co/R9MgSWd"><img src="https://i.ibb.co/zrLm5wD/21.png" alt="21" border="0"></a>
 <br/>
 <br/>
 Lets rename each NIC to make things easier for us.
 <br/>
-<br/>
 <a href="https://ibb.co/kxT2HxC"><img src="https://i.ibb.co/nbyMgbJ/22.png" alt="22" border="0"></a>
 <br/>
 <br/>
 Lets Assign our IP address to NIC2 adapter:
+<br/>
 ```
 Right click > Properties
 ```  
+<br/>
 <a href="https://ibb.co/L0Ns7Pm"><img src="https://i.ibb.co/51KJH9m/23.png" alt="23" border="0"></a>
 <br/>
 <br/>
-Double click on IPv4
-<br/>
+```
+Double click on IPv4.
+```
 <br/>
 <a href="https://ibb.co/4SkQwPH"><img src="https://i.ibb.co/t2Rdw89/24.png" alt="24" border="0"></a>
 <br/>
