@@ -81,29 +81,29 @@ Create the VM. First the Domain Controller (Server 2019)
 <br/>
 <a href="https://ibb.co/MkyVXTm"><img src="https://i.ibb.co/s9pwBSZ/3a.png" alt="3a" border="0"></a>
 <br/>
+<br/>
 <a href="https://ibb.co/qdJR5Tq"><img src="https://i.ibb.co/QfD6dyS/3b.png" alt="3b" border="0"></a>
+<br/>
 <br/>
 <a href="https://ibb.co/j50xgGc"><img src="https://i.ibb.co/MhwjMpY/4.png" alt="4" border="0"></a>
 <br/>
+<br/>
 <a href="https://ibb.co/fNqxb3v"><img src="https://i.ibb.co/NNtyX0S/5.png" alt="5" border="0"></a>
 <br/>
-
-We need to add two Network Adapters. 1st is NAT.
 <br/>
+We need to add two Network Adapters. 1st is NAT.
 <br/>
 <a href="https://ibb.co/P1W7d7v"><img src="https://i.ibb.co/wpQ9f9F/6.png" alt="6" border="0"></a>
 <br/>
 <br/>
 Second Adapter is Internal.
 <br/>
-<br/>
 <a href="https://ibb.co/w7kxq89"><img src="https://i.ibb.co/nBG5y4H/7.png" alt="7" border="0"></a>
+<br/>
 <br/>
 Installing the VM.
 <br/>
-<br/>
 <a href="https://ibb.co/wgwGJ33"><img src="https://i.ibb.co/MSGw8WW/8.png" alt="8" border="0"></a>
-<br/>
 <br/>
 ```
 Choose Custom Install.
@@ -145,13 +145,13 @@ Go to:
 This PC > click on Drive D
 ```
 <br/>
-<br/>
 <a href="https://ibb.co/1v2hq7t"><img src="https://i.ibb.co/mDz1qbV/13.png" alt="13" border="0"></a>
 <br/>
 <br/>
 ```
 Click > VBoxWindowsAdditions-amd64
 ```
+<br/>
 ```
 Click > Install
 ```
@@ -160,20 +160,18 @@ Click > Install
 <br/>
 Reboot later. However Shut the VM down.
 <br/>
-<br/>
 <a href="https://ibb.co/418TN2t"><img src="https://i.ibb.co/fDkp09F/15.png" alt="15" border="0"></a>
 <br/>
 <br/>
 Login to Windows again.
 <br/>
-<br/>
 <a href="https://ibb.co/9GwDY1r"><img src="https://i.ibb.co/WsDhKM2/16.png" alt="16" border="0"></a>
-<br/>
 <br/>
 <br/>
 Now setup our IP Addresses for the Domain Controller. Remember we have 2 NICs.
 The first NICs IP address will be automatically set via DHCP.
 The 2nd NIC will have to assign the IP Address, Default Gateway.
+<br/>
 ```
 Go to Settings > Ethernet > Change adapter options
 ```
@@ -193,7 +191,6 @@ Right Click > Status > Details
 <br/>
 <br/>
 This looks like our 1st NIC's IP address. It will usually start with a number 10.
-<br/>
 <br/>
 <a href="https://ibb.co/m08hyNq"><img src="https://i.ibb.co/cwL28YF/20.png" alt="20" border="0"></a>
 <br/>
@@ -228,11 +225,14 @@ Default gateway is left blank because this NIC doesn’t use a Default gateway.
 <br/>
 When you install Active Directory it automatically installs DNS Server.
 <br/>
+<br/>
 You can either use the same IP address in the Preferred DNS Server or you can add a loop back address 
 which is 127.0.0.1.
+<br/>
+<br/>
 A loopback address is something that refers to yourself.
-So if you ping the above loop back address it will ping yourself. Interesting….
-
+So if you ping the above loop back address it will ping yourself. 
+<br/>
 <a href="https://ibb.co/0h5VtdS"><img src="https://i.ibb.co/pJqry98/25.png" alt="25" border="0"></a>
 <br/>
 <br/>
@@ -241,6 +241,7 @@ Lets also rename our PC
 Settings > About > Rename this PC
 Restart Computer
 <a href="https://ibb.co/xX627hy"><img src="https://i.ibb.co/2WdFkqw/26.png" alt="26" border="0"></a>
+<br/>
 <br/>
 <a href="https://ibb.co/PTwKMF4"><img src="https://i.ibb.co/dbGFtj6/27.png" alt="27" border="0"></a>
 <br/>
