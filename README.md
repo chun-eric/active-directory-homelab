@@ -23,15 +23,17 @@ A project that sets up an active directory domain controller in a virtual enviro
 <h3>High Level Project Overview</h3>
 <br/>
 The below diagram represents what the goal of our project is.
+<br/>
 <a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="1" border="0" /></a>
 <br/>
 <br/>
-We will install two different Virtual Machines. One is a Windows 10 ISO and the other is Server 2019 ISO
+We will install two different Virtual Machines. One is a Windows 10 ISO and the other is Server 2019 ISO.
 <br/>
-1st VM is our Domain Controller (Server 2019)
-This VM has 2 NICs
-1st NIC is connected to the Internet. Will get addressing from Home Router via DHCP
-2nd NIC is internal and will be connected to a local Private Network
+The first VM is our Domain Controller (Server 2019). This VM has 2 Network Interface Cards (NICs).
+<br/>
+The first NIC is connected to the Internet. Will get addressing from Home Router via DHCP. The second
+NIC is internal and will be connected to a local Private Network.
+<br/>
 We will assign IP addresses for the Internal Network 
 We will install active directory on the server and create our domain 
 We will configure NAT and Routing (RAS)
