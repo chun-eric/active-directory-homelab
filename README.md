@@ -22,7 +22,6 @@ A project that sets up an active directory domain controller in a virtual enviro
 <h2>Program walk-through:</h2>
 <h3>High Level Project Overview</h3>
 <br/>
-It also configures Content Hub solutions
 <br/>
 <br/>
 <a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="1" border="0" /></a>
@@ -70,63 +69,64 @@ Download Windows server 2019 - fill out some details
 <br/>
 Create the VM. First the Domain Controller (Server 2019)
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="2" border="0" /></a>
+<a href="https://ibb.co/5xB3sjB"><img src="https://i.ibb.co/x8JbzgJ/2.png" alt="2" border="0"></a>
 <br/>
 Currently I skipped the Unattended Install
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="3" border="0" /></a>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="4" border="0" /></a>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="5" border="0" /></a>
+<a href="https://ibb.co/MkyVXTm"><img src="https://i.ibb.co/s9pwBSZ/3a.png" alt="3a" border="0"></a>
+<a href="https://ibb.co/qdJR5Tq"><img src="https://i.ibb.co/QfD6dyS/3b.png" alt="3b" border="0"></a>
+<a href="https://ibb.co/j50xgGc"><img src="https://i.ibb.co/MhwjMpY/4.png" alt="4" border="0"></a>
+<a href="https://ibb.co/fNqxb3v"><img src="https://i.ibb.co/NNtyX0S/5.png" alt="5" border="0"></a>
 
 We need to add two Network Adapters. 1st is NAT.
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="6" border="0" /></a>
+<a href="https://ibb.co/P1W7d7v"><img src="https://i.ibb.co/wpQ9f9F/6.png" alt="6" border="0"></a>
 <br/>
 Second Adapter is Internal.
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="7" border="0" /></a>
+<a href="https://ibb.co/w7kxq89"><img src="https://i.ibb.co/nBG5y4H/7.png" alt="7" border="0"></a>
 <br/>
 Installing the VM.
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="8" border="0" /></a>
+<a href="https://ibb.co/wgwGJ33"><img src="https://i.ibb.co/MSGw8WW/8.png" alt="8" border="0"></a>
 <br/>
 <br/>
 Choose Custom Install.
 Click Next
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="9" border="0" /></a>
+<a href="https://ibb.co/ZhZthDq"><img src="https://i.ibb.co/qRZXRQT/9.png" alt="9" border="0"></a>
 <br/>
 After installing 
 add password.
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="10" border="0" /></a>
+<a href="https://ibb.co/QmTbVXp"><img src="https://i.ibb.co/NYJVq7t/10.png" alt="10" border="0"></a>
 <br/>
 <br/>
 Open with Ctrl + Alt + Delete
 got to Input > Insert Ctrl + Alt + Delete
 or else you wont be able to unlock.
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="11" border="0" /></a>
+<a href="https://ibb.co/ZhS7W6b"><img src="https://i.ibb.co/19Mj8f4/11.png" alt="11" border="0"></a>
 <br/>
 <br/>
 Click > Yes
 We want other PCs to be discoverable on this network.
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="12" border="0" /></a>
+<a href="https://ibb.co/WtrHJRJ"><img src="https://i.ibb.co/Srk6CZC/12.png" alt="12" border="0"></a>
 <br/>
 <br/>
 To get rid of the lag and to allow the VM to resize properly 
 we need to add guest box additions images
 Go to this PC > click on Drive D
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="13" border="0" /></a>
+<a href="https://ibb.co/1v2hq7t"><img src="https://i.ibb.co/mDz1qbV/13.png" alt="13" border="0"></a>
 <br/>
 <br/>
 Click on  VBoxWindowsAdditions-amd64
 Click > Install
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="14" border="0" /></a>
+<<a href="https://ibb.co/gjkVdLJ"><img src="https://i.ibb.co/Tv9L1xt/14.png" alt="14" border="0"></a>
 <br/>
 <br/>
 Reboot later. However Shut the VM down.
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="15" border="0" /></a>
+<a href="https://ibb.co/418TN2t"><img src="https://i.ibb.co/fDkp09F/15.png" alt="15" border="0"></a>
 <br/>
 <br/>
 <br/>
 Login to Windows again.
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="16" border="0" /></a>
+<a href="https://ibb.co/9GwDY1r"><img src="https://i.ibb.co/WsDhKM2/16.png" alt="16" border="0"></a>
 <br/>
 <br/>
 <br/>
@@ -135,38 +135,38 @@ Remember we have 2 NICs
 I NICs IP address will be automatically set via DHCP
 The 2nd NIC will have to assign the IP Address, Default Gateway, 
 Go to Settings > Ethernet > Change adapter options
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="17" border="0" /></a>
+<a href="https://ibb.co/GdsF0yn"><img src="https://i.ibb.co/CwJWzgm/17.png" alt="17" border="0"></a>
 <br/>
 <br/>
 Rename the network to the correct NIC.
 Right click > Status > Details 
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="18" border="0" /></a>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="19" border="0" /></a>
+<a href="https://ibb.co/TvdcZQH"><img src="https://i.ibb.co/C1DBqjn/18.png" alt="18" border="0"></a>
+<a href="https://ibb.co/m06ZGH5"><img src="https://i.ibb.co/zFG9rSV/19.png" alt="19" border="0"></a>
 <br/>
 <br/>
 This looks like our NIC 1 IP address
 Usually start with a 10
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="20" border="0" /></a>
+<a href="https://ibb.co/m08hyNq"><img src="https://i.ibb.co/cwL28YF/20.png" alt="20" border="0"></a>
 <br/>
 <br/>
 <br/>
 Right click the second adapter. We know this is NIC2 the internal adapter
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="21" border="0" /></a>
+<a href="https://ibb.co/R9MgSWd"><img src="https://i.ibb.co/zrLm5wD/21.png" alt="21" border="0"></a>
 <br/>
 <br/>
 Lets appropriately rename each NIC
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="22" border="0" /></a>
+<a href="https://ibb.co/kxT2HxC"><img src="https://i.ibb.co/nbyMgbJ/22.png" alt="22" border="0"></a>
 <br/>
 <br/>
 <br/>
 Lets Assign our IP address to NIC2 adapter
 right click properties > 
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="23" border="0" /></a>
+<a href="https://ibb.co/L0Ns7Pm"><img src="https://i.ibb.co/51KJH9m/23.png" alt="23" border="0"></a>
 <br/>
 <br/>
 <br/>
 Double click on IPv4
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="24" border="0" /></a>
+<a href="https://ibb.co/4SkQwPH"><img src="https://i.ibb.co/t2Rdw89/24.png" alt="24" border="0"></a>
 <br/>
 <br/>
 <br/>
@@ -179,16 +179,16 @@ which is 127.0.0.1
 A loopback address is something that refers to yourself.
 So if you ping the above loop back address it will ping yourself. Interesting….
 
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="25" border="0" /></a>
+<a href="https://ibb.co/0h5VtdS"><img src="https://i.ibb.co/pJqry98/25.png" alt="25" border="0"></a>
 <br/>
 <br/>
 Finished Installing the 1st VM
 Lets also rename our PC
 Settings > About > Rename this PC
 Restart Computer
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="26" border="0" /></a>
+<a href="https://ibb.co/xX627hy"><img src="https://i.ibb.co/2WdFkqw/26.png" alt="26" border="0"></a>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="27" border="0" /></a>
+<a href="https://ibb.co/PTwKMF4"><img src="https://i.ibb.co/dbGFtj6/27.png" alt="27" border="0"></a>
 <br/>
 
 
@@ -202,50 +202,50 @@ Restart Computer
 <br/>
 Click > Add roles and features
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="28" border="0" /></a>
+<a href="https://ibb.co/qgKdVM8"><img src="https://i.ibb.co/PWKN0Zy/28.png" alt="28" border="0"></a>
 <br/>
 <br/>
 Click > Next
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="29" border="0" /></a>
+<a href="https://ibb.co/n0Y6nx7"><img src="https://i.ibb.co/yRZdYH6/29.png" alt="29" border="0"></a>
 <br/>
 <br/>
 Select > Role based or feature based installation
 Click > Next 
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="30" border="0" /></a>
+<a href="https://ibb.co/S3SLdG4"><img src="https://i.ibb.co/DRdq8TH/30.png" alt="30" border="0"></a>
 <br/>
 <br/>
 Select the correct server on which to install the roles and features
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="31" border="0" /></a>
+<a href="https://ibb.co/rG2gXb6"><img src="https://i.ibb.co/GvQXrs2/31.png" alt="31" border="0"></a>
 <br/>
 <br/>
 Select Active Directory Domain Services
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="32" border="0" /></a>
+<a href="https://ibb.co/5LyJ968"><img src="https://i.ibb.co/YhMVW3k/32.png" alt="32" border="0"></a>
 <br/>
 <br/>
 Click > Next
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="33" border="0" /></a>
+<a href="https://ibb.co/q15Wq7w"><img src="https://i.ibb.co/kc19b5F/33.png" alt="33" border="0"></a>
 <br/>
 <br/>
 Click > Next 
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="34" border="0" /></a>
+<a href="https://ibb.co/2YqnpNf"><img src="https://i.ibb.co/1JZv46w/34.png" alt="34" border="0"></a>
 <br/>
 <br/>
 Select Install
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="35" border="0" /></a>
+<a href="https://ibb.co/PQdykM7"><img src="https://i.ibb.co/GTqDm9K/35.png" alt="35" border="0"></a>
 <br/>
 <br/>
 
@@ -257,7 +257,7 @@ Click > Promote this server to a domain controller
 
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="36" border="0" /></a>
+<a href="https://ibb.co/bvxrX2x"><img src="https://i.ibb.co/PWR5g9R/36.png" alt="36" border="0"></a>
 <br/>
 <br/>
 Select > Add a new forest
@@ -268,57 +268,56 @@ Click > Next
 
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="37" border="0" /></a>
+<a href="https://ibb.co/MNLKvrs"><img src="https://i.ibb.co/tC5nGg4/37.png" alt="37" border="0"></a>
 <br/>
 <br/>
-We are not going to use this in the future 
-but input 
+We are not going to use this in the future but input 
 Password1 as the password for Directory Services Restore Mode password
 
 Click > Next
 
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="38" border="0" /></a>
+<a href="https://ibb.co/WsXbRP0"><img src="https://i.ibb.co/GFDKrt9/38.png" alt="38" border="0"></a>
 <br/>
 <br/>
 Ignore the warning
 Click > Next
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="39" border="0" /></a>
+<a href="https://ibb.co/tDv8zSN"><img src="https://i.ibb.co/89f6bJR/39.png" alt="39" border="0"></a>
 <br/>
 <br/>
 Click > Next
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="40" border="0" /></a>
+<a href="https://ibb.co/PZXJTHb"><img src="https://i.ibb.co/jv0qVXx/40.png" alt="40" border="0"></a>
 <br/>
 <br/>
 Click > Next
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="41" border="0" /></a>
+<a href="https://ibb.co/4Yfptzx"><img src="https://i.ibb.co/dLcDMFy/41.png" alt="41" border="0"></a>
 <br/>
 <br/>
 Click > Next
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="42" border="0" /></a>
+<a href="https://ibb.co/pXpXz0G"><img src="https://i.ibb.co/ryJy67T/42.png" alt="42" border="0"></a>
 <br/>
 <br/>
 Click > Install
 Computer will restart
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="43" border="0" /></a>
+<a href="https://ibb.co/vY0wtLj"><img src="https://i.ibb.co/16FvSRm/43.png" alt="43" border="0"></a>
 <br/>
 <br/>
 Login Again
 Notice the Domain name in front of the Adminstrator
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="44" border="0" /></a>
+<a href="https://ibb.co/grLcLpm"><img src="https://i.ibb.co/x2trt0X/44.png" alt="44" border="0"></a>
 <br/>
 <br/>
 Now we are going to create our own dedicated Domain Admin Account
@@ -326,20 +325,20 @@ Now we are going to create our own dedicated Domain Admin Account
 Start > Adminstrative Tools > Active Directory Users and Computers
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="45" border="0" /></a>
+<a href="https://ibb.co/ZHX3nkM"><img src="https://i.ibb.co/TK2ZVFg/45.png" alt="45" border="0"></a>
 <br/>
 <br/>
 On left sidebar
 right click on mydomain.com > New > Organizational Unit
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="46" border="0" /></a>
+<a href="https://ibb.co/CKwgw54"><img src="https://i.ibb.co/JjcVcR8/46.png" alt="46" border="0"></a>
 <br/>
 <br/>
 Name the folder _Admins
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="47" border="0" /></a>
+<a href="https://ibb.co/VxJ14CS"><img src="https://i.ibb.co/ypd9jky/47.png" alt="47" border="0"></a>
 <br/>
 <br/>
 right click _Admins folder > New > User
@@ -349,12 +348,12 @@ user logon name
 a-rlee (a signifies admin)
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="48" border="0" /></a>
+<a href="https://ibb.co/rMB4djH"><img src="https://i.ibb.co/MpzMBv7/48.png" alt="48" border="0"></a>
 <br/>
 <br/>
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="49" border="0" /></a>
+<a href="https://ibb.co/FBB9hDP"><img src="https://i.ibb.co/gDDGrRn/49.png" alt="49" border="0"></a>
 <br/>
 <br/>
 Click > Next
@@ -365,7 +364,7 @@ Click > Next
 Click > Finish
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="50" border="0" /></a>
+<a href="https://ibb.co/rkTsyJL"><img src="https://i.ibb.co/CBN20FX/50.png" alt="50" border="0"></a>
 <br/>
 <br/>
 In the _Admin folder you can see our new user Robert Lee
@@ -374,7 +373,7 @@ right click on Rober Lee > Properties
 
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="51" border="0" /></a>
+<a href="https://ibb.co/nPyVdj1"><img src="https://i.ibb.co/WVXd8fz/51.png" alt="51" border="0"></a>
 <br/>
 <br/>
 Go to Member Of Tab
@@ -383,13 +382,13 @@ Enter the Object names to select > type 'domain admins' > Check Names > Ok > App
 
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="52" border="0" /></a>
+<a href="https://ibb.co/qJpL6Tt"><img src="https://i.ibb.co/rdHK9DC/52.png" alt="52" border="0"></a>
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="53" border="0" /></a>
+<a href="https://ibb.co/Sy96nGh"><img src="https://i.ibb.co/mTMRqgL/53.png" alt="53" border="0"></a>
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="54" border="0" /></a>
+<a href="https://ibb.co/QYnyNKm"><img src="https://i.ibb.co/Dwk0CRK/54.png" alt="54" border="0"></a>
 <br/>
 <br/>
 Sign out to test that it works
@@ -398,7 +397,7 @@ Enter your username and password credentials
 a-rlee + password
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="55" border="0" /></a>
+<a href="https://ibb.co/tQxYhTc"><img src="https://i.ibb.co/Fm08WLJ/55.png" alt="55" border="0"></a>
 <br/>
 <br/>
 Okay so now you can log into your domain admin account 
@@ -406,7 +405,7 @@ Howeveri am getting a network issue. It is saying I have no internet connection.
 Currently I am on a NAT. But maybe I need to set it to bridged adapter. 
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="56" border="0" /></a>
+<a href="https://ibb.co/pwLD7xC"><img src="https://i.ibb.co/XLCBQbm/56.png" alt="56" border="0"></a>
 <br/>
 <br/>
 
@@ -469,53 +468,53 @@ Server Manager
 Click > Roles and Features
 
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="57" border="0" /></a>
+<a href="https://ibb.co/cbmNSRq"><img src="https://i.ibb.co/wJvKF8t/57.png" alt="57" border="0"></a>
 <br/>
 <br/>
 Click > Next
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="58" border="0" /></a>
+<a href="https://ibb.co/Yp69Fy6"><img src="https://i.ibb.co/LnMwXJM/58.png" alt="58" border="0"></a>
 <br/>
 <br/>
 Installation Type > Role Based > Next
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="59" border="0" /></a>
+<a href="https://ibb.co/gm66K0Q"><img src="https://i.ibb.co/sbttYTc/59.png" alt="59" border="0"></a>
 <br/>
 <br/>
 Server Selection > DomainController.mydomain.com > Next
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="60" border="0" /></a>
+<a href="https://ibb.co/GxFsnMD"><img src="https://i.ibb.co/HFXNBPy/60.png" alt="60" border="0"></a>
 <br/>
 <br/>
 Server Roles > Remote Access > Next
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="61" border="0" /></a>
+<a href="https://ibb.co/1vDDV52"><img src="https://i.ibb.co/Wxbb9wK/61.png" alt="61" border="0"></a>
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="62" border="0" /></a>
+<a href="https://ibb.co/FH2Xvfz"><img src="https://i.ibb.co/KKdDZQW/62.png" alt="62" border="0"></a>
 <br/>
 <br/>
 Role Services > Select Routing & DirectAccess and VPN (RAS) > Next
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="63" border="0" /></a>
+<a href="https://ibb.co/wBgNNgG"><img src="https://i.ibb.co/xXLSSL9/63.png" alt="63" border="0"></a>
 <br/>
 <br/>
 Web Server Role > Next 
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="64" border="0" /></a>
+<a href="https://ibb.co/tZQf1vw"><img src="https://i.ibb.co/8zN3Qfn/64.png" alt="64" border="0"></a>
 <br/>
 <br/>
 Confirmation > Install
 Close
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="65" border="0" /></a>
+<a href="https://ibb.co/pK5Mj6j"><img src="https://i.ibb.co/PW0PGsG/65.png" alt="65" border="0"></a>
 <br/>
 <br/>
 Now that the role installed we need to configure and enable routing and remote access
@@ -524,33 +523,33 @@ Now that the role installed we need to configure and enable routing and remote a
 Server Manager Dashboard > Tools > Routing and Remote Access
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="66" border="0" /></a>
+<a href="https://ibb.co/xGWg86S"><img src="https://i.ibb.co/L6mgh1z/66.png" alt="66" border="0"></a>
 <br/>
 <br/>
 Select DC  (local)
 Right click > Configure and Enable Routing and Remote Access > Next
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="67" border="0" /></a>
+<a href="https://ibb.co/ZXY7wss"><img src="https://i.ibb.co/DW8T6XX/67.png" alt="67" border="0"></a>
 <br/>
 <br/>
 Select Network Address Translation (NAT) > Next
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="68" border="0" /></a>
+<a href="https://ibb.co/2sZh8cd"><img src="https://i.ibb.co/7RkCgrK/68.png" alt="68" border="0"></a>
 <br/>
 <br/>
 Select our Internet facing Network Interface > Next > Finish
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="69" border="0" /></a>
+<a href="https://ibb.co/fD8cLgn"><img src="https://i.ibb.co/FHsPCr0/69.png" alt="69" border="0"></a>
 <br/>
 <br/>
 Now our Domain Controller is green 
 We have configures our Domain Controller
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="70" border="0" /></a>
+<a href="https://ibb.co/BZ6YDM0"><img src="https://i.ibb.co/zR2tcvq/70.png" alt="70" border="0"></a>
 <br/>
 <br/>
 Next step is to set up a DHCP Server on our Domain Controller.
@@ -575,7 +574,7 @@ Default gateway
 DNS Server 
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="71" border="0" /></a>
+<a href="https://ibb.co/9VgJV0H"><img src="https://i.ibb.co/k9Bp9T2/71.png" alt="71" border="0"></a>
 <br/>
 <br/>
 DHCP solves this by assigning dynamic IP addresses
@@ -588,7 +587,7 @@ Default gateway
 DNS Server
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="72" border="0" /></a>
+<a href="https://ibb.co/CHYcBSB"><img src="https://i.ibb.co/Vqz1VkV/72.png" alt="72" border="0"></a>
 <br/>
 <br/>
 You can confirm all the DHCP server settings that is given to our computer in windows command prompt
@@ -596,7 +595,7 @@ type
 Ipconfig /all
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="73" border="0" /></a>
+<a href="https://ibb.co/qx0Z6pX"><img src="https://i.ibb.co/N714RKQ/73.png" alt="73" border="0"></a>
 <br/>
 <br/>
 A DHCP Server assigns IP addresses from its scope
@@ -606,7 +605,7 @@ Start IP address to End IP address
 Example below the DHCP Server can hand out around 100 IP addresses
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="74" border="0" /></a>
+<a href="https://ibb.co/CmGmKww"><img src="https://i.ibb.co/q7Q7YDD/74.png" alt="74" border="0"></a>
 <br/>
 <br/>
 The DHCP server assigns the IP address as a lease
@@ -616,7 +615,7 @@ Why leasing?
 Its to make sure the DHCP Server doesn’t run out of IP addresses
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="75" border="0" /></a>
+<a href="https://ibb.co/KL701Sh"><img src="https://i.ibb.co/s6QmBzR/75.png" alt="75" border="0"></a>
 <br/>
 <br/>
 Also what if one of the computers is removed if it is not leased. 
@@ -631,7 +630,7 @@ The DHCP server will know which ones are available to use and which IP addresses
 Also the computers and the devices on the network will renew their leases to the DHCP Server
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="76" border="0" /></a>
+<a href="https://ibb.co/Dp4qKf5"><img src="https://i.ibb.co/py2mXjJ/76.png" alt="76" border="0"></a>
 <br/>
 <br/>
 If you want a computer or device to have a specific IP address (IP reservation) all the time
@@ -641,7 +640,7 @@ A reservation ensures that a specific computer or device will always be given th
 Reservations are typically given to special devices or computers such as network printers, servers, routers
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="77" border="0" /></a>
+<a href="https://ibb.co/NsyjRKH"><img src="https://i.ibb.co/f2xpJHP/77.png" alt="77" border="0"></a>
 <br/>
 <br/>
 DHCP is a service that runs on a server such as Microsoft server or a Linux Server
@@ -662,31 +661,31 @@ Click Add roles and features
 
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="78" border="0" /></a>
+<a href="https://ibb.co/T4Vrx6Y"><img src="https://i.ibb.co/jycHPmb/78.png" alt="78" border="0"></a>
 <br/>
 <br/>
 Click Next for Before you Begin
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="79" border="0" /></a>
+<a href="https://ibb.co/0JX99mC"><img src="https://i.ibb.co/QmcHHpP/79.png" alt="79" border="0"></a>
 <br/>
 <br/>
 Installation Type > Role Based or feature based installation > Next 
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="80" border="0" /></a>
+<a href="https://ibb.co/YBfKwCZ"><img src="https://i.ibb.co/Ld9qHF5/80.png" alt="80" border="0"></a>
 <br/>
 <br/>
 Select the correct server > Next
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="81" border="0" /></a>
+<a href="https://ibb.co/QFBdvQ7"><img src="https://i.ibb.co/pvDyjw6/81.png" alt="81" border="0"></a>
 <br/>
 <br/>
 Server Roles > select DHCP Server > Next
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="82" border="0" /></a>
+<a href="https://ibb.co/s693x8Q"><img src="https://i.ibb.co/TbMhj9R/82.png" alt="82" border="0"></a>
 <br/>
 <br/>
 Features > Next
@@ -694,26 +693,26 @@ DHCP > Next
 Click > Install
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="83" border="0" /></a>
+<a href="https://ibb.co/gjYHQxG"><img src="https://i.ibb.co/vw9gfSb/83.png" alt="83" border="0"></a>
 <br/>
 <br/>
 In Server Manager Dashboard > Tools > DHCP
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="84" border="0" /></a>
+<a href="https://ibb.co/GTxG7zh"><img src="https://i.ibb.co/16vBZFS/84.png" alt="84" border="0"></a>
 <br/>
 <br/>
 We need to create a scope for the DHCP 
 Right click IPv4 > Select New Scope > Next
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="85" border="0" /></a>
+<a href="https://ibb.co/gTS4yhX"><img src="https://i.ibb.co/G2WH7N1/85.png" alt="85" border="0"></a>
 <br/>
 <br/>
 Usually you can name the Scope after the IP range
 Click Next
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="86" border="0" /></a>
+<a href="https://ibb.co/hsVCVX5"><img src="https://i.ibb.co/NxK7K1h/86.png" alt="86" border="0"></a>
 <br/>
 <br/>
 Adding the Start and End IP address
@@ -725,7 +724,7 @@ I really don’t know how the subnet mask is calculated. I need to watch a video
 You must do research!
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="87" border="0" /></a>
+<a href="https://ibb.co/ssN8cdj"><img src="https://i.ibb.co/wpP58Fy/87.png" alt="87" border="0"></a>
 <br/>
 <br/>
 Okay so in ChatGPT
@@ -782,7 +781,7 @@ We don’t really need to add any exclusions
 
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="88" border="0" /></a>
+<a href="https://ibb.co/j31M5fF"><img src="https://i.ibb.co/NWHj3Cz/88.png" alt="88" border="0"></a>
 <br/>
 <br/>
 Lease Duration
@@ -799,7 +798,7 @@ Because this is a home lab project we will just leave it as 8 days.
 Click > Next
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="89" border="0" /></a>
+<a href="https://ibb.co/5kwpdZb"><img src="https://i.ibb.co/423vckh/89.png" alt="89" border="0"></a>
 <br/>
 <br/>
 Configure DHCP Options > Yes
@@ -808,7 +807,7 @@ This tells the client which servers to use for DNS, which servers to use for Def
 this will help the client get on the internet.
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="90" border="0" /></a>
+<a href="https://ibb.co/9cqm4bJ"><img src="https://i.ibb.co/tQbw2qS/90.png" alt="90" border="0"></a>
 <br/>
 <br/>
 In our project configuration the DC using a RAS/NAT to guide the client to the Internet.
@@ -818,52 +817,52 @@ So the default gateway will the Domain Controllers IP address 172.16.0.1 which h
 Click > Add
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="91" border="0" /></a>
+<a href="https://ibb.co/q7zDPXj"><img src="https://i.ibb.co/QpZJ1zQ/91.png" alt="91" border="0"></a>
 <br/>
 <br/>
 Click > Next
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="92" border="0" /></a>
+<a href="https://ibb.co/vP2prYv"><img src="https://i.ibb.co/Z8y5wm1/92.png" alt="92" border="0"></a>
 <br/>
 <br/>
 For Domain Name and DNS Servers
 Active Directory automatically installs it in the DC
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="93" border="0" /></a>
+<a href="https://ibb.co/kDHzCz5"><img src="https://i.ibb.co/LgkB7BY/93.png" alt="93" border="0"></a>
 <br/>
 <br/>
 WINS Servers > Next
 WINS Servers are old 
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="94" border="0" /></a>
+<a href="https://ibb.co/3SbG8x7"><img src="https://i.ibb.co/SVgW1kP/94.png" alt="94" border="0"></a>
 <br/>
 <br/>
 Click > Next > Finish
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="95" border="0" /></a>
+<a href="https://ibb.co/qCQ63sV"><img src="https://i.ibb.co/KDvnpqS/95.png" alt="95" border="0"></a>
 <br/>
 <br/>
 Right click DHCP Server > Authorize
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="96" border="0" /></a>
+<a href="https://ibb.co/S7LYjyX"><img src="https://i.ibb.co/1JSygQf/96.png" alt="96" border="0"></a>
 <br/>
 <br/>
 Right click DHCP Server > Refresh
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="97" border="0" /></a>
+<a href="https://ibb.co/mv2RymT"><img src="https://i.ibb.co/9w1p4Jg/97.png" alt="97" border="0"></a>
 <br/>
 <br/>
 Now we have our DHCP Server setup!
 Awesome!
 <br/>
 <br/>
-<a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="98" border="0" /></a>
+<a href="https://ibb.co/PrJFzs7"><img src="https://i.ibb.co/S6H57Dh/98.png" alt="98" border="0"></a>
 <br/>
 <br/>
 
@@ -889,52 +888,52 @@ In Server Manager Dashboard
 
 Click Configure this local server.
 <br/>
-<a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="99" border="0" /></a>
+<a href="https://ibb.co/71Ys9Vp"><img src="https://i.ibb.co/HHF5JYP/99.png" alt="99" border="0"></a>
 <br/>
 <br/>
 
 <br/>
 <br/>
-<a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="100" border="0" /></a>
+<a href="https://ibb.co/VTVHNKL"><img src="https://i.ibb.co/1TZsnS0/100.png" alt="100" border="0"></a>
 <br/>
 <br/>
 IE Enhanced Security Configuration > Off
 <br/>
 <br/>
-<a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="101" border="0" /></a>
+<a href="https://ibb.co/c3Jn8PN"><img src="https://i.ibb.co/bm19vxr/101.png" alt="101" border="0"></a>
 <br/>
 <br/>
 Go to the internet and download the zipped script file
 Save it on desktop and extract it on the desktop
 <br/>
 <br/>
-<a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="102" border="0" /></a>
+<a href="https://ibb.co/Zc82BS7"><img src="https://i.ibb.co/KVqK2DS/102.png" alt="102" border="0"></a>
 <br/>
 <br/>
 Inside the folder we see the scripts and the names txt file. 
 The names text file has around 1000 generated names but in text file format
 <br/>
 <br/>
-<a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="103" border="0" /></a>
+<a href="https://ibb.co/7rBctZm"><img src="https://i.ibb.co/RQtnTsw/103.png" alt="103" border="0"></a>
 <br/>
 <br/>
 Next we have to go PowerShell ISE (integrated Scripting Environment)
 and run as adminstrator.
 <br/>
 <br/>
-<a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="104" border="0" /></a>
+<a href="https://ibb.co/88ptsN9"><img src="https://i.ibb.co/LpWHRY1/104.png" alt="104" border="0"></a>
 <br/>
 <br/>
 Open the PowerShell Script > 1_CREATE_USERS
 <br/>
 <br/>
-<a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="105" border="0" /></a>
+<a href="https://ibb.co/mB7ZGDt"><img src="https://i.ibb.co/QcGSfbn/105.png" alt="105" border="0"></a>
 <br/>
 <br/>
 Now our script has opened
 <br/>
 <br/>
-<a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="106" border="0" /></a>
+<a href="https://ibb.co/ZG71m8x"><img src="https://i.ibb.co/8Nt4c59/106.png" alt="106" border="0"></a>
 <br/>
 <br/>
 Before we run anything we have to enable the execution of all scripts
@@ -942,7 +941,7 @@ If I try to run the script now
 we get an error
 <br/>
 <br/>
-<a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="107" border="0" /></a>
+<a href="https://ibb.co/Kh9FQKK"><img src="https://i.ibb.co/XLzSdYY/107.png" alt="107" border="0"></a>
 <br/>
 <br/>
 We need to change the execution policy for PowerShell scripts on a system
@@ -955,7 +954,7 @@ and allow PowerShell scripts to run without restrictions
 Click > Yes to All
 <br/>
 <br/>
-<a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="108" border="0" /></a>
+<a href="https://ibb.co/gjkPmKD"><img src="https://i.ibb.co/1vFd7W9/108.png" alt="108" border="0"></a>
 <br/>
 <br/>
 Explaining the code
@@ -1005,12 +1004,12 @@ We need to cd into the directory of the names.txt file
 
 <br/>
 <br/>
-<a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="109a" border="0" /></a>
+<a href="https://ibb.co/sVgZz4K"><img src="https://i.ibb.co/3CTnQbp/109a.png" alt="109a" border="0"></a>
 <br/>
 <br/>
 Check with ls command
 <br/>
-<a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="109b" border="0" /></a>
+<a href="https://ibb.co/5GfwbWd"><img src="https://i.ibb.co/xXRdxSy/109b.png" alt="109b" border="0"></a>
 <br/>
 <br/>
 
@@ -1018,20 +1017,20 @@ Now all we need to do is run the script
 Now you can see it running the script and creating users
 <br/>
 <br/>
-<a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="110" border="0" /></a>
+<a href="https://ibb.co/fkRtGX3"><img src="https://i.ibb.co/8r324my/110.png" alt="110" border="0"></a>
 <br/>
 <br/>
 If we check our Active Directory and our Domain
 We can see that our _USERS folders have been created with other 1000 users inside it
 <br/>
 <br/>
-<a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="111" border="0" /></a>
+<a href="https://ibb.co/VY3mFcM"><img src="https://i.ibb.co/N27S0dW/111.png" alt="111" border="0"></a>
 <br/>
 <br/>
 If we search for Robert Lee we can see that our user has been created.
 <br/>
 <br/>
-<a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="112" border="0" /></a>
+<a href="https://ibb.co/LnsVkDk"><img src="https://i.ibb.co/hDT37x7/112.png" alt="112" border="0"></a>
 <br/>
 <br/>
 
@@ -1047,38 +1046,38 @@ If we search for Robert Lee we can see that our user has been created.
 <br/>
 Go through the same process of creating a VM but for Windows 10 Pro ISO
 <br/>
-<a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="113" border="0" /></a>
+<a href="https://ibb.co/jGS27Xg"><img src="https://i.ibb.co/J294XJ5/113.png" alt="113" border="0"></a>
 <br/>
 <br/>
 We will set our Network > Internal Network
 <br/>
 <br/>
-<a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="114" border="0" /></a>
+<a href="https://ibb.co/tq7m1mM"><img src="https://i.ibb.co/zXyntnh/114.png" alt="114" border="0"></a>
 <br/>
 <br/>
 Choose Windows 10 Pro
 Custom Install
 <br/>
 <br/>
-<a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="115" border="0" /></a>
+<a href="https://ibb.co/tChX0dv"><img src="https://i.ibb.co/VBNmFKz/115.png" alt="115" border="0"></a>
 <br/>
 <br/>
 Input user to this PC
 <br/>
 <br/>
-<a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="116" border="0" /></a>
+<a href="https://ibb.co/DYG5FXj"><img src="https://i.ibb.co/nB3zy2K/116.png" alt="116" border="0"></a>
 <br/>
 <br/>
 No password
 <br/>
 <br/>
-<a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="117" border="0" /></a>
+<a href="https://ibb.co/NsGz4Fx"><img src="https://i.ibb.co/7X0F9Sv/117.png" alt="117" border="0"></a>
 <br/>
 <br/>
 Now we are logged into our Window 10 Client
 <br/>
 <br/>
-<a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="118" border="0" /></a>
+<a href="https://ibb.co/HXg1NZM"><img src="https://i.ibb.co/hC8hX0n/118.png" alt="118" border="0"></a>
 <br/>
 <br/>
 Now to see if we are connected to the internet
@@ -1089,7 +1088,7 @@ If you can see default gateway address the same as the DC IP address of 172.16.0
 
 <br/>
 <br/>
-<a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="119" border="0" /></a>
+<a href="https://ibb.co/PTwXrwJ"><img src="https://i.ibb.co/z8G9mGC/119.png" alt="119" border="0"></a>
 <br/>
 <br/>
 Lets ping our domain mydomain.com
@@ -1097,14 +1096,14 @@ Lets ping our domain mydomain.com
 Everything seems to be working! Woohoo!
 <br/>
 <br/>
-<a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="120" border="0" /></a>
+<a href="https://ibb.co/rkyTNtn"><img src="https://i.ibb.co/NxYQb3w/120.png" alt="120" border="0"></a>
 <br/>
 <br/>
 Lets also change the name of the computer
 system > Rename this PC (advanced)
 <br/>
 <br/>
-<a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="121" border="0" /></a>
+<a href="https://ibb.co/SrQqCkz"><img src="https://i.ibb.co/dgbnYNR/121.png" alt="121" border="0"></a>
 <br/>
 <br/>
  Click > Change
@@ -1113,13 +1112,13 @@ Change Computer Name > CLIENT1
 Member of Domain: 
 <br/>
 <br/>
-<a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="122" border="0" /></a>
+<a href="https://ibb.co/n0vVNX6"><img src="https://i.ibb.co/hMjnJGL/122.png" alt="122" border="0"></a>
 <br/>
 <br/>
 our admin username and password robert lee
 <br/>
 <br/>
-<a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="123" border="0" /></a>
+<a href="https://ibb.co/5rPK8w0"><img src="https://i.ibb.co/0CxsMv7/123.png" alt="123" border="0"></a>
 <br/>
 <br/>
 If you go back to our Server Manager Dashboard > DHCP
@@ -1128,20 +1127,20 @@ We can see under IPv4 > Scope > Address Leases> CLIENT1.mydomain
 There is our CLIENT1 machine being leased
 <br/>
 <br/>
-<a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="124" border="0" /></a>
+<a href="https://ibb.co/hL0S3pM"><img src="https://i.ibb.co/Bck908P/124.png" alt="124" border="0"></a>
 <br/>
 <br/>
 Our new computer is also showing in our Active Directory Users and Computers within the DC
 <br/>
 <br/>
-<a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="125" border="0" /></a>
+<a href="https://ibb.co/chgnXKP"><img src="https://i.ibb.co/23n4Y0w/125.png" alt="125" border="0"></a>
 <br/>
 <br/>
 Lets logout and login as one of our other users in our CLIENT1 machine
 Click Other user
 <br/>
 <br/>
-<a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="126" border="0" /></a>
+<a href="https://ibb.co/v40YtmP"><img src="https://i.ibb.co/d48gh62/126.png" alt="126" border="0"></a>
 <br/>
 <br/>
 Lets sign in as one of the random users we created
@@ -1150,19 +1149,19 @@ acoke
 Password1
 <br/>
 <br/>
-<a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="127" border="0" /></a>
+<a href="https://ibb.co/tbpnyr3"><img src="https://i.ibb.co/LCdB47v/127.png" alt="127" border="0"></a>
 <br/>
 <br/>
 We are logged into as the new user!
 <br/>
 <br/>
-<a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="128" border="0" /></a>
+<a href="https://ibb.co/2q10pn3"><img src="https://i.ibb.co/rkRKX72/128.png" alt="128" border="0"></a>
 <br/>
 <br/>
 We can also connect to the internet.
 <br/>
 <br/>
-<a href="https://ibb.co/ZTJHTrJ"><img src="https://i.ibb.co/bd3HdV3/14.png" alt="129" border="0" /></a>
+<a href="https://ibb.co/G7S2H04"><img src="https://i.ibb.co/ZdD82Vp/129.png" alt="129" border="0"></a>
 <br/>
 <br/>
 
@@ -1175,10 +1174,12 @@ We can also connect to the internet.
 <br/>
 This project would replicate a mini corporate network for a small to medium sized business.
 Imagine a new staff being hired, we create a new user via a script, assign a new account through a Domain Controller.
-The new higher would login with their corporate credentials onto a laptop in the domain we created. 
-All internet traffic is directed through domain controller. 
+The new hire would login with their corporate credentials onto a laptop in the domain we created. 
+All internet traffic would be directed through a domain controller. 
 
-What a great project.
+This concludes the project.
+
+Thank you for reading until the end.
 <br/>
 <br/>
 <br/>
