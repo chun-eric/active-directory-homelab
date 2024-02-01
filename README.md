@@ -22,11 +22,11 @@ A project that sets up an active directory domain controller in a virtual enviro
 <h2>Program walk-through:</h2>
 <h3>High Level Project Overview</h3>
 <br/>
-<br/>
-<br/>
+The below diagram represents what the goal of our project is.
 <a href="https://ibb.co/KwrZLwr"><img src="https://i.ibb.co/vYj5QYj/1.png" alt="1" border="0" /></a>
 <br/>
-We will install two different Virtual Machines. One is Windows 10 ISO and the other is Server 2019 ISO
+<br/>
+We will install two different Virtual Machines. One is a Windows 10 ISO and the other is Server 2019 ISO
 <br/>
 1st VM is our Domain Controller (Server 2019)
 This VM has 2 NICs
@@ -89,8 +89,12 @@ Installing the VM.
 <a href="https://ibb.co/wgwGJ33"><img src="https://i.ibb.co/MSGw8WW/8.png" alt="8" border="0"></a>
 <br/>
 <br/>
+```
 Choose Custom Install.
-Click Next
+```
+```
+Click > Next
+```
 <a href="https://ibb.co/ZhZthDq"><img src="https://i.ibb.co/qRZXRQT/9.png" alt="9" border="0"></a>
 <br/>
 After installing 
