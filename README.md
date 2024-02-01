@@ -83,9 +83,11 @@ We need to add two Network Adapters. 1st is NAT.
 <a href="https://ibb.co/P1W7d7v"><img src="https://i.ibb.co/wpQ9f9F/6.png" alt="6" border="0"></a>
 <br/>
 Second Adapter is Internal.
+<br/>
 <a href="https://ibb.co/w7kxq89"><img src="https://i.ibb.co/nBG5y4H/7.png" alt="7" border="0"></a>
 <br/>
 Installing the VM.
+<br/>
 <a href="https://ibb.co/wgwGJ33"><img src="https://i.ibb.co/MSGw8WW/8.png" alt="8" border="0"></a>
 <br/>
 <br/>
@@ -97,18 +99,25 @@ Click > Next
 ```
 <a href="https://ibb.co/ZhZthDq"><img src="https://i.ibb.co/qRZXRQT/9.png" alt="9" border="0"></a>
 <br/>
-After installing 
-add password.
+After installing add password.
 <a href="https://ibb.co/QmTbVXp"><img src="https://i.ibb.co/NYJVq7t/10.png" alt="10" border="0"></a>
 <br/>
 <br/>
-Open with Ctrl + Alt + Delete
-got to Input > Insert Ctrl + Alt + Delete
+Open with:
+```
+Ctrl + Alt + Delete
+```
+got to:
+```
+Input > Insert Ctrl + Alt + Delete
+```
 or else you wont be able to unlock.
 <a href="https://ibb.co/ZhS7W6b"><img src="https://i.ibb.co/19Mj8f4/11.png" alt="11" border="0"></a>
 <br/>
 <br/>
+```
 Click > Yes
+```
 We want other PCs to be discoverable on this network.
 <a href="https://ibb.co/WtrHJRJ"><img src="https://i.ibb.co/Srk6CZC/12.png" alt="12" border="0"></a>
 <br/>
@@ -119,31 +128,42 @@ Go to this PC > click on Drive D
 <a href="https://ibb.co/1v2hq7t"><img src="https://i.ibb.co/mDz1qbV/13.png" alt="13" border="0"></a>
 <br/>
 <br/>
-Click on  VBoxWindowsAdditions-amd64
+```
+Click > VBoxWindowsAdditions-amd64
+```
+```
 Click > Install
-<<a href="https://ibb.co/gjkVdLJ"><img src="https://i.ibb.co/Tv9L1xt/14.png" alt="14" border="0"></a>
+```
+<a href="https://ibb.co/gjkVdLJ"><img src="https://i.ibb.co/Tv9L1xt/14.png" alt="14" border="0"></a>
 <br/>
 <br/>
 Reboot later. However Shut the VM down.
+<br/>
 <a href="https://ibb.co/418TN2t"><img src="https://i.ibb.co/fDkp09F/15.png" alt="15" border="0"></a>
 <br/>
 <br/>
 <br/>
 Login to Windows again.
+<br/>
 <a href="https://ibb.co/9GwDY1r"><img src="https://i.ibb.co/WsDhKM2/16.png" alt="16" border="0"></a>
 <br/>
 <br/>
 <br/>
-SETUP our IP Addresses for the DC
-Remember we have 2 NICs
-I NICs IP address will be automatically set via DHCP
-The 2nd NIC will have to assign the IP Address, Default Gateway, 
+Now setup our IP Addresses for the Domain Controller. Remember we have 2 NICs.
+The first NICs IP address will be automatically set via DHCP.
+The 2nd NIC will have to assign the IP Address, Default Gateway.
+```
 Go to Settings > Ethernet > Change adapter options
+```
+<br/>
 <a href="https://ibb.co/GdsF0yn"><img src="https://i.ibb.co/CwJWzgm/17.png" alt="17" border="0"></a>
 <br/>
 <br/>
 Rename the network to the correct NIC.
-Right click > Status > Details 
+```
+Right Click > Status > Details
+```
+<br/>
 <a href="https://ibb.co/TvdcZQH"><img src="https://i.ibb.co/C1DBqjn/18.png" alt="18" border="0"></a>
 <a href="https://ibb.co/m06ZGH5"><img src="https://i.ibb.co/zFG9rSV/19.png" alt="19" border="0"></a>
 <br/>
