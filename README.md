@@ -78,67 +78,71 @@ Create the VM. First the Domain Controller (Server 2019)
 <br/>
  I skipped the Unattended Install intentionally for now.
 <br/>
-<br/>
 <a href="https://ibb.co/MkyVXTm"><img src="https://i.ibb.co/s9pwBSZ/3a.png" alt="3a" border="0"></a>
 <br/>
 <br/>
 <a href="https://ibb.co/qdJR5Tq"><img src="https://i.ibb.co/QfD6dyS/3b.png" alt="3b" border="0"></a>
 <br/>
+We select our base memory and the number of processors.
 <br/>
 <a href="https://ibb.co/j50xgGc"><img src="https://i.ibb.co/MhwjMpY/4.png" alt="4" border="0"></a>
 <br/>
+Hard drive allocation was set to around 40 gigabytes.
 <br/>
 <a href="https://ibb.co/fNqxb3v"><img src="https://i.ibb.co/NNtyX0S/5.png" alt="5" border="0"></a>
 <br/>
 <br/>
-We need to add two Network Adapters. 1st is NAT.
+We need to add two Network Adapters. The first one is NAT.
 <br/>
 <a href="https://ibb.co/P1W7d7v"><img src="https://i.ibb.co/wpQ9f9F/6.png" alt="6" border="0"></a>
 <br/>
 <br/>
-Second Adapter is Internal.
+The second Adapter is Internal Network.
 <br/>
 <a href="https://ibb.co/w7kxq89"><img src="https://i.ibb.co/nBG5y4H/7.png" alt="7" border="0"></a>
 <br/>
 <br/>
-Installing the VM.
+Now we install the Windows Server VM.
 <br/>
 <a href="https://ibb.co/wgwGJ33"><img src="https://i.ibb.co/MSGw8WW/8.png" alt="8" border="0"></a>
 <br/>
 <br/>
 Choose Custom Install.
-<br/>
+
 ```
 Click > Next
 ```
+<br/>
 <a href="https://ibb.co/ZhZthDq"><img src="https://i.ibb.co/qRZXRQT/9.png" alt="9" border="0"></a>
 <br/>
 <br/>
-After installing, type your password.
+After the installation has completed, type in your password.
 <br/>
 <a href="https://ibb.co/QmTbVXp"><img src="https://i.ibb.co/NYJVq7t/10.png" alt="10" border="0"></a>
 <br/>
 <br/>
 Open Windows by holding:
-<br/>
+
 ```
 Ctrl + Alt + Delete
 ```
-<br/>
 Go to:
+
 ```
 Input > Insert Ctrl + Alt + Delete
 ```
 <br/>
-or else you wont be able to unlock.
+or else we wont be able to unlock screen to enter our credentials.
+<br/>
 <a href="https://ibb.co/ZhS7W6b"><img src="https://i.ibb.co/19Mj8f4/11.png" alt="11" border="0"></a>
 <br/>
 <br/>
 ```
 Click > Yes
 ```
-<br/>
+
 We want other PCs to be discoverable on this network.
+<br/>
 <a href="https://ibb.co/WtrHJRJ"><img src="https://i.ibb.co/Srk6CZC/12.png" alt="12" border="0"></a>
 <br/>
 <br/>
@@ -146,7 +150,7 @@ To get rid of the lag and to allow the VM to resize properly, we will need to ad
 <br/>
 <br/>
 Go to:
-<br/>
+
 ```
 This PC > click on Drive D
 ```
@@ -154,13 +158,16 @@ This PC > click on Drive D
 <a href="https://ibb.co/1v2hq7t"><img src="https://i.ibb.co/mDz1qbV/13.png" alt="13" border="0"></a>
 <br/>
 <br/>
+
 ```
 Click > VBoxWindowsAdditions-amd64
 ```
 <br/>
+
 ```
 Click > Install
 ```
+<br/>
 <a href="https://ibb.co/gjkVdLJ"><img src="https://i.ibb.co/Tv9L1xt/14.png" alt="14" border="0"></a>
 <br/>
 <br/>
@@ -179,6 +186,7 @@ The first NICs IP address will be automatically set via DHCP.
 The 2nd NIC will have to assign the IP Address, Default Gateway.
 <br/>
 <br/>
+
 ```
 Go to Settings > Ethernet > Change adapter options.
 ```
@@ -189,6 +197,7 @@ Go to Settings > Ethernet > Change adapter options.
 Rename the network to the correct NIC.
 <br/>
 <br/>
+
 ```
 Right Click > Status > Details
 ```
@@ -214,6 +223,7 @@ Lets rename each NIC to make things easier for us.
 <br/>
 Lets Assign our IP address to NIC2 adapter:
 <br/>
+
 ```
 Right click > Properties
 ```  
@@ -221,6 +231,7 @@ Right click > Properties
 <a href="https://ibb.co/L0Ns7Pm"><img src="https://i.ibb.co/51KJH9m/23.png" alt="23" border="0"></a>
 <br/>
 <br/>
+
 ```
 Double click on IPv4.
 ```
@@ -248,6 +259,7 @@ Finished Installing the 1st VM
 Lets also rename our PC
 Settings > About > Rename this PC
 Restart Computer
+<br/>
 <a href="https://ibb.co/xX627hy"><img src="https://i.ibb.co/2WdFkqw/26.png" alt="26" border="0"></a>
 <br/>
 <br/>
