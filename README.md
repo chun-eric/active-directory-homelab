@@ -251,10 +251,9 @@ So if you ping the above loop back address it will ping yourself.
 Finished installing the first virtual machine.
 Lets also rename our PC:
 
-'''
+```
 Settings > About > Rename this PC
-'''
-
+```
 Restart the computer.
 <br/>
 <a href="https://ibb.co/xX627hy"><img src="https://i.ibb.co/2WdFkqw/26.png" alt="26" border="0"></a>
