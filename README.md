@@ -139,7 +139,6 @@ If we don't follow the above instruction, we won't be able to unlock the home sc
 ```
 Click > Yes
 ```
-
 We want other PCs to be discoverable on this network.
 <br/>
 <a href="https://ibb.co/WtrHJRJ"><img src="https://i.ibb.co/Srk6CZC/12.png" alt="12" border="0"></a>
@@ -153,7 +152,6 @@ Go to:
 ```
 This PC > Click on Drive D
 ```
-<br/>
 <a href="https://ibb.co/1v2hq7t"><img src="https://i.ibb.co/mDz1qbV/13.png" alt="13" border="0"></a>
 <br/>
 <br/>
@@ -165,7 +163,6 @@ Click > VBoxWindowsAdditions-amd64
 ```
 Click > Install
 ```
-<br/>
 <a href="https://ibb.co/gjkVdLJ"><img src="https://i.ibb.co/Tv9L1xt/14.png" alt="14" border="0"></a>
 <br/>
 <br/>
@@ -199,13 +196,13 @@ Rename the network to the correct NIC.
 ```
 Right Click > Status > Details
 ```
-<br/>
-<br/>
 <a href="https://ibb.co/TvdcZQH"><img src="https://i.ibb.co/C1DBqjn/18.png" alt="18" border="0"></a>
 <a href="https://ibb.co/m06ZGH5"><img src="https://i.ibb.co/zFG9rSV/19.png" alt="19" border="0"></a>
 <br/>
 <br/>
-This looks like our 1st NIC's IP address. It will usually start with a number 10.
+This looks like our 1st NIC's IP address. 
+<br/>
+It will usually start with a number 10.
 <br/>
 <a href="https://ibb.co/m08hyNq"><img src="https://i.ibb.co/cwL28YF/20.png" alt="20" border="0"></a>
 <br/>
@@ -226,7 +223,6 @@ Lets Assign our IP address to NIC2 adapter:
 ```
 Right click > Properties
 ```  
-<br/>
 <a href="https://ibb.co/L0Ns7Pm"><img src="https://i.ibb.co/51KJH9m/23.png" alt="23" border="0"></a>
 <br/>
 <br/>
@@ -234,7 +230,6 @@ Right click > Properties
 ```
 Double click on IPv4.
 ```
-<br/>
 <a href="https://ibb.co/4SkQwPH"><img src="https://i.ibb.co/t2Rdw89/24.png" alt="24" border="0"></a>
 <br/>
 <br/>
@@ -250,7 +245,6 @@ You can either use the same IP address in the Preferred DNS Server or you can ad
 A loopback address is something that refers to yourself.
 So if you ping the above loop back address it will ping yourself. 
 <br/>
-<br/>
 <a href="https://ibb.co/0h5VtdS"><img src="https://i.ibb.co/pJqry98/25.png" alt="25" border="0"></a>
 <br/>
 <br/>
@@ -260,6 +254,7 @@ Lets also rename our PC:
 '''
 Settings > About > Rename this PC
 '''
+<br/>
 Restart the computer.
 <br/>
 <a href="https://ibb.co/xX627hy"><img src="https://i.ibb.co/2WdFkqw/26.png" alt="26" border="0"></a>
