@@ -254,7 +254,7 @@ Lets also rename our PC:
 '''
 Settings > About > Rename this PC
 '''
-<br/>
+
 Restart the computer.
 <br/>
 <a href="https://ibb.co/xX627hy"><img src="https://i.ibb.co/2WdFkqw/26.png" alt="26" border="0"></a>
