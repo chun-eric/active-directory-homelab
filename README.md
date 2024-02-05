@@ -72,7 +72,6 @@ Download Virtual Box, Windows 10 and Windows server 2019. We need to fill out so
 <br/>
 Create the VM. First the Domain Controller (Server 2019)
 <br/>
-<br/>
 <a href="https://ibb.co/5xB3sjB"><img src="https://i.ibb.co/x8JbzgJ/2.png" alt="2" border="0"></a>
 <br/>
 <br/>
@@ -83,9 +82,11 @@ Create the VM. First the Domain Controller (Server 2019)
 <br/>
 <a href="https://ibb.co/qdJR5Tq"><img src="https://i.ibb.co/QfD6dyS/3b.png" alt="3b" border="0"></a>
 <br/>
+<br/>
 We select our base memory and the number of processors.
 <br/>
 <a href="https://ibb.co/j50xgGc"><img src="https://i.ibb.co/MhwjMpY/4.png" alt="4" border="0"></a>
+<br/>
 <br/>
 Hard drive allocation was set to around 40 gigabytes.
 <br/>
@@ -112,7 +113,6 @@ Choose Custom Install.
 ```
 Click > Next
 ```
-<br/>
 <a href="https://ibb.co/ZhZthDq"><img src="https://i.ibb.co/qRZXRQT/9.png" alt="9" border="0"></a>
 <br/>
 <br/>
@@ -131,8 +131,7 @@ Go to:
 ```
 Input > Insert Ctrl + Alt + Delete
 ```
-<br/>
-or else we wont be able to unlock screen to enter our credentials.
+If we don't follow the above instruction, we won't be able to unlock the home screen to enter our credentials.
 <br/>
 <a href="https://ibb.co/ZhS7W6b"><img src="https://i.ibb.co/19Mj8f4/11.png" alt="11" border="0"></a>
 <br/>
@@ -152,7 +151,7 @@ To get rid of the lag and to allow the VM to resize properly, we will need to ad
 Go to:
 
 ```
-This PC > click on Drive D
+This PC > Click on Drive D
 ```
 <br/>
 <a href="https://ibb.co/1v2hq7t"><img src="https://i.ibb.co/mDz1qbV/13.png" alt="13" border="0"></a>
@@ -162,7 +161,6 @@ This PC > click on Drive D
 ```
 Click > VBoxWindowsAdditions-amd64
 ```
-<br/>
 
 ```
 Click > Install
@@ -208,6 +206,7 @@ Right Click > Status > Details
 <br/>
 <br/>
 This looks like our 1st NIC's IP address. It will usually start with a number 10.
+<br/>
 <a href="https://ibb.co/m08hyNq"><img src="https://i.ibb.co/cwL28YF/20.png" alt="20" border="0"></a>
 <br/>
 <br/>
@@ -239,26 +238,29 @@ Double click on IPv4.
 <a href="https://ibb.co/4SkQwPH"><img src="https://i.ibb.co/t2Rdw89/24.png" alt="24" border="0"></a>
 <br/>
 <br/>
-Default gateway is left blank because this NIC doesn’t use a Default gateway.
+The default gateway is left blank because this NIC doesn’t use a Default gateway.
 <br/>
 <br/>
-When you install Active Directory it automatically installs DNS Server.
+When you install Active Directory, it automatically installs a DNS Server.
 <br/>
 <br/>
-You can either use the same IP address in the Preferred DNS Server or you can add a loop back address 
-which is 127.0.0.1.
+You can either use the same IP address in the Preferred DNS Server or you can add a loop back address which is 127.0.0.1.
 <br/>
 <br/>
 A loopback address is something that refers to yourself.
 So if you ping the above loop back address it will ping yourself. 
 <br/>
+<br/>
 <a href="https://ibb.co/0h5VtdS"><img src="https://i.ibb.co/pJqry98/25.png" alt="25" border="0"></a>
 <br/>
 <br/>
-Finished Installing the 1st VM
-Lets also rename our PC
+Finished installing the first virtual machine.
+Lets also rename our PC:
+
+'''
 Settings > About > Rename this PC
-Restart Computer
+'''
+Restart the computer.
 <br/>
 <a href="https://ibb.co/xX627hy"><img src="https://i.ibb.co/2WdFkqw/26.png" alt="26" border="0"></a>
 <br/>
