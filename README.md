@@ -271,6 +271,7 @@ Restart the computer.
 </br>
 <h3>Step 2 - Installing Active Directory Domain Services and Creating a Domain</h3>
 <br/>
+
 ```
 Click > Add roles and features
 ```
