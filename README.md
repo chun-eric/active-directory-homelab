@@ -275,24 +275,24 @@ Restart the computer.
 ```
 Click > Add roles and features
 ```
-<br/>
 <a href="https://ibb.co/qgKdVM8"><img src="https://i.ibb.co/PWKN0Zy/28.png" alt="28" border="0"></a>
 <br/>
 <br/>
+
 ```
 Click > Next
 ```
-<br/>
 <a href="https://ibb.co/n0Y6nx7"><img src="https://i.ibb.co/yRZdYH6/29.png" alt="29" border="0"></a>
 <br/>
-<br/>
+
 ```
 Select > Role based or feature based installation
 ```
+
 ```
 Click > Next 
 ```
-<br/>
+
 <a href="https://ibb.co/S3SLdG4"><img src="https://i.ibb.co/DRdq8TH/30.png" alt="30" border="0"></a>
 <br/>
 <br/>
