@@ -271,187 +271,219 @@ Restart the computer.
 </br>
 <h3>Step 2 - Installing Active Directory Domain Services and Creating a Domain</h3>
 <br/>
+```
 Click > Add roles and features
+```
 <br/>
 <a href="https://ibb.co/qgKdVM8"><img src="https://i.ibb.co/PWKN0Zy/28.png" alt="28" border="0"></a>
 <br/>
 <br/>
+```
 Click > Next
-<br/>
+```
 <br/>
 <a href="https://ibb.co/n0Y6nx7"><img src="https://i.ibb.co/yRZdYH6/29.png" alt="29" border="0"></a>
 <br/>
 <br/>
+```
 Select > Role based or feature based installation
+```
+```
 Click > Next 
-<br/>
+```
 <br/>
 <a href="https://ibb.co/S3SLdG4"><img src="https://i.ibb.co/DRdq8TH/30.png" alt="30" border="0"></a>
 <br/>
 <br/>
-Select the correct server on which to install the roles and features
-<br/>
+Select the correct server on which to install the roles and features.
 <br/>
 <a href="https://ibb.co/rG2gXb6"><img src="https://i.ibb.co/GvQXrs2/31.png" alt="31" border="0"></a>
 <br/>
 <br/>
 Select Active Directory Domain Services
 <br/>
-<br/>
 <a href="https://ibb.co/5LyJ968"><img src="https://i.ibb.co/YhMVW3k/32.png" alt="32" border="0"></a>
 <br/>
 <br/>
+```
 Click > Next
-<br/>
+```
 <br/>
 <a href="https://ibb.co/q15Wq7w"><img src="https://i.ibb.co/kc19b5F/33.png" alt="33" border="0"></a>
 <br/>
 <br/>
+```
 Click > Next 
-<br/>
+```
 <br/>
 <a href="https://ibb.co/2YqnpNf"><img src="https://i.ibb.co/1JZv46w/34.png" alt="34" border="0"></a>
 <br/>
 <br/>
-Select Install
-<br/>
+```
+Select > Install
+```
 <br/>
 <a href="https://ibb.co/PQdykM7"><img src="https://i.ibb.co/GTqDm9K/35.png" alt="35" border="0"></a>
 <br/>
 <br/>
-
-After installing we need to do Post deployment Configuration
+After installing, we need to do a Post deployment Configuration.
 We have installed the software for active directory but we havent created a domain.
 
-
+```
 Click > Promote this server to a domain controller
-
-<br/>
+```
 <br/>
 <a href="https://ibb.co/bvxrX2x"><img src="https://i.ibb.co/PWR5g9R/36.png" alt="36" border="0"></a>
 <br/>
 <br/>
+```
 Select > Add a new forest
+```
 
-Specifiy domain name. You can name it whatever you want. 
-Root domain name: mydomain.com
+Specifiy a domain name. We can name it whatever we want. 
+For instance --> Root domain name: mydomain.com.
+
+```
 Click > Next
-
-<br/>
+```
 <br/>
 <a href="https://ibb.co/MNLKvrs"><img src="https://i.ibb.co/tC5nGg4/37.png" alt="37" border="0"></a>
 <br/>
 <br/>
-We are not going to use this in the future but input 
-Password1 as the password for Directory Services Restore Mode password
+We are not going to use this in the future but input. 
+Password1 as the password for Directory Services Restore Mode password.
 
+```
 Click > Next
-
-<br/>
+```
 <br/>
 <a href="https://ibb.co/WsXbRP0"><img src="https://i.ibb.co/GFDKrt9/38.png" alt="38" border="0"></a>
 <br/>
 <br/>
-Ignore the warning
+```
 Click > Next
-<br/>
+```
 <br/>
 <a href="https://ibb.co/tDv8zSN"><img src="https://i.ibb.co/89f6bJR/39.png" alt="39" border="0"></a>
 <br/>
 <br/>
+```
 Click > Next
-<br/>
+```
 <br/>
 <a href="https://ibb.co/PZXJTHb"><img src="https://i.ibb.co/jv0qVXx/40.png" alt="40" border="0"></a>
 <br/>
 <br/>
+```
 Click > Next
-<br/>
+```
 <br/>
 <a href="https://ibb.co/4Yfptzx"><img src="https://i.ibb.co/dLcDMFy/41.png" alt="41" border="0"></a>
 <br/>
 <br/>
+```
 Click > Next
-<br/>
+```
 <br/>
 <a href="https://ibb.co/pXpXz0G"><img src="https://i.ibb.co/ryJy67T/42.png" alt="42" border="0"></a>
 <br/>
 <br/>
+```
 Click > Install
-Computer will restart
-<br/>
+```
+
+The computer will restart.
 <br/>
 <a href="https://ibb.co/vY0wtLj"><img src="https://i.ibb.co/16FvSRm/43.png" alt="43" border="0"></a>
 <br/>
 <br/>
-Login Again
-Notice the Domain name in front of the Adminstrator
-<br/>
+Let's login again.
+Notice the Domain name in front of the Adminstrator.
 <br/>
 <a href="https://ibb.co/grLcLpm"><img src="https://i.ibb.co/x2trt0X/44.png" alt="44" border="0"></a>
 <br/>
 <br/>
-Now we are going to create our own dedicated Domain Admin Account
+Now we are going to create our own dedicated Domain Admin Account.
 
+```
 Start > Adminstrative Tools > Active Directory Users and Computers
-<br/>
+```
 <br/>
 <a href="https://ibb.co/ZHX3nkM"><img src="https://i.ibb.co/TK2ZVFg/45.png" alt="45" border="0"></a>
 <br/>
 <br/>
-On left sidebar
-right click on mydomain.com > New > Organizational Unit
-<br/>
+On left sidebar:
+```
+Right click on mydomain.com > New > Organizational Unit
+```
 <br/>
 <a href="https://ibb.co/CKwgw54"><img src="https://i.ibb.co/JjcVcR8/46.png" alt="46" border="0"></a>
 <br/>
 <br/>
-Name the folder _Admins
-<br/>
+Name the folder _Admins.
 <br/>
 <a href="https://ibb.co/VxJ14CS"><img src="https://i.ibb.co/ypd9jky/47.png" alt="47" border="0"></a>
 <br/>
 <br/>
-right click _Admins folder > New > User
-Add name fields
+```
+Right click _Admins folder > New > User
+```
+Add the following name fields:
+```
 Robert Lee
-user logon name
+```
+
+User login name:
+```
 a-rlee (a signifies admin)
-<br/>
+```
 <br/>
 <a href="https://ibb.co/rMB4djH"><img src="https://i.ibb.co/MpzMBv7/48.png" alt="48" border="0"></a>
-<br/>
-<br/>
 <br/>
 <br/>
 <a href="https://ibb.co/FBB9hDP"><img src="https://i.ibb.co/gDDGrRn/49.png" alt="49" border="0"></a>
 <br/>
 <br/>
+```
 Click > Next
+```
+
+```
 Password > [Add password]
-Uncheck > User must change password at next logon
+```
+```
+Uncheck > User (must change password at next login)
+```
+```
 Check > Password never expires
+```
+```
 Click > Next
+```
+```
 Click > Finish
-<br/>
+```
 <br/>
 <a href="https://ibb.co/rkTsyJL"><img src="https://i.ibb.co/CBN20FX/50.png" alt="50" border="0"></a>
 <br/>
 <br/>
-In the _Admin folder you can see our new user Robert Lee
-but now we have to make him the admin
-right click on Rober Lee > Properties 
-
-<br/>
+In the _Admin folder you can see our new user Robert Lee but we have to make him the admin.
+```
+Right click on Rober Lee > Properties 
+```
 <br/>
 <a href="https://ibb.co/nPyVdj1"><img src="https://i.ibb.co/WVXd8fz/51.png" alt="51" border="0"></a>
 <br/>
 <br/>
-Go to Member Of Tab
-Click > Add
-Enter the Object names to select > type 'domain admins' > Check Names > Ok > Apply > Ok
+Go to Member Of Tab.
 
-<br/>
+```
+Click > Add
+```
+
+```
+Select + enter the Object name > type 'domain admins' > Check Names > Ok > Apply > Ok
+```
 <br/>
 <a href="https://ibb.co/qJpL6Tt"><img src="https://i.ibb.co/rdHK9DC/52.png" alt="52" border="0"></a>
 <br/>
@@ -462,19 +494,20 @@ Enter the Object names to select > type 'domain admins' > Check Names > Ok > App
 <a href="https://ibb.co/QYnyNKm"><img src="https://i.ibb.co/Dwk0CRK/54.png" alt="54" border="0"></a>
 <br/>
 <br/>
-Sign out to test that it works
+Sign out to test that it works.
+
+```
 Click bottom left > Other user
-Enter your username and password credentials
-a-rlee + password
-<br/>
+```
+
+Finally enter your username and password credentials.
 <br/>
 <a href="https://ibb.co/tQxYhTc"><img src="https://i.ibb.co/Fm08WLJ/55.png" alt="55" border="0"></a>
 <br/>
 <br/>
-Okay so now you can log into your domain admin account 
-Howeveri am getting a network issue. It is saying I have no internet connection. (see bottom right)
-Currently I am on a NAT. But maybe I need to set it to bridged adapter. 
-<br/>
+Okay, now you can log into your domain admin account.
+However I was getting a network issue. It is saying that I have no internet connection. (see bottom right)
+Currently I am on a NAT. But maybe I need to set it to a bridged adapter. 
 <br/>
 <a href="https://ibb.co/pwLD7xC"><img src="https://i.ibb.co/XLCBQbm/56.png" alt="56" border="0"></a>
 <br/>
