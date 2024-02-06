@@ -292,7 +292,6 @@ Select > Role based or feature based installation
 ```
 Click > Next 
 ```
-
 <a href="https://ibb.co/S3SLdG4"><img src="https://i.ibb.co/DRdq8TH/30.png" alt="30" border="0"></a>
 <br/>
 <br/>
@@ -306,24 +305,24 @@ Select Active Directory Domain Services
 <a href="https://ibb.co/5LyJ968"><img src="https://i.ibb.co/YhMVW3k/32.png" alt="32" border="0"></a>
 <br/>
 <br/>
+
 ```
 Click > Next
 ```
-<br/>
 <a href="https://ibb.co/q15Wq7w"><img src="https://i.ibb.co/kc19b5F/33.png" alt="33" border="0"></a>
 <br/>
 <br/>
+
 ```
 Click > Next 
 ```
-<br/>
 <a href="https://ibb.co/2YqnpNf"><img src="https://i.ibb.co/1JZv46w/34.png" alt="34" border="0"></a>
 <br/>
 <br/>
+
 ```
 Select > Install
 ```
-<br/>
 <a href="https://ibb.co/PQdykM7"><img src="https://i.ibb.co/GTqDm9K/35.png" alt="35" border="0"></a>
 <br/>
 <br/>
@@ -333,10 +332,10 @@ We have installed the software for active directory but we havent created a doma
 ```
 Click > Promote this server to a domain controller
 ```
-<br/>
 <a href="https://ibb.co/bvxrX2x"><img src="https://i.ibb.co/PWR5g9R/36.png" alt="36" border="0"></a>
 <br/>
 <br/>
+
 ```
 Select > Add a new forest
 ```
@@ -347,7 +346,6 @@ For instance --> Root domain name: mydomain.com.
 ```
 Click > Next
 ```
-<br/>
 <a href="https://ibb.co/MNLKvrs"><img src="https://i.ibb.co/tC5nGg4/37.png" alt="37" border="0"></a>
 <br/>
 <br/>
@@ -357,38 +355,38 @@ Password1 as the password for Directory Services Restore Mode password.
 ```
 Click > Next
 ```
-<br/>
 <a href="https://ibb.co/WsXbRP0"><img src="https://i.ibb.co/GFDKrt9/38.png" alt="38" border="0"></a>
 <br/>
 <br/>
+
 ```
 Click > Next
 ```
-<br/>
 <a href="https://ibb.co/tDv8zSN"><img src="https://i.ibb.co/89f6bJR/39.png" alt="39" border="0"></a>
 <br/>
 <br/>
+
 ```
 Click > Next
 ```
-<br/>
 <a href="https://ibb.co/PZXJTHb"><img src="https://i.ibb.co/jv0qVXx/40.png" alt="40" border="0"></a>
 <br/>
 <br/>
+
 ```
 Click > Next
 ```
-<br/>
 <a href="https://ibb.co/4Yfptzx"><img src="https://i.ibb.co/dLcDMFy/41.png" alt="41" border="0"></a>
 <br/>
 <br/>
+
 ```
 Click > Next
 ```
-<br/>
 <a href="https://ibb.co/pXpXz0G"><img src="https://i.ibb.co/ryJy67T/42.png" alt="42" border="0"></a>
 <br/>
 <br/>
+
 ```
 Click > Install
 ```
@@ -414,10 +412,10 @@ Start > Adminstrative Tools > Active Directory Users and Computers
 <br/>
 <br/>
 On left sidebar:
+
 ```
 Right click on mydomain.com > New > Organizational Unit
 ```
-<br/>
 <a href="https://ibb.co/CKwgw54"><img src="https://i.ibb.co/JjcVcR8/46.png" alt="46" border="0"></a>
 <br/>
 <br/>
@@ -426,19 +424,22 @@ Name the folder _Admins.
 <a href="https://ibb.co/VxJ14CS"><img src="https://i.ibb.co/ypd9jky/47.png" alt="47" border="0"></a>
 <br/>
 <br/>
+
 ```
 Right click _Admins folder > New > User
 ```
+
 Add the following name fields:
+
 ```
 Robert Lee
 ```
 
 User login name:
+
 ```
 a-rlee (a signifies admin)
 ```
-<br/>
 <a href="https://ibb.co/rMB4djH"><img src="https://i.ibb.co/MpzMBv7/48.png" alt="48" border="0"></a>
 <br/>
 <br/>
@@ -448,7 +449,6 @@ a-rlee (a signifies admin)
 ```
 Click > Next
 ```
-
 ```
 Password > [Add password]
 ```
@@ -464,15 +464,14 @@ Click > Next
 ```
 Click > Finish
 ```
-<br/>
 <a href="https://ibb.co/rkTsyJL"><img src="https://i.ibb.co/CBN20FX/50.png" alt="50" border="0"></a>
 <br/>
 <br/>
 In the _Admin folder you can see our new user Robert Lee but we have to make him the admin.
+
 ```
 Right click on Rober Lee > Properties 
 ```
-<br/>
 <a href="https://ibb.co/nPyVdj1"><img src="https://i.ibb.co/WVXd8fz/51.png" alt="51" border="0"></a>
 <br/>
 <br/>
@@ -485,7 +484,6 @@ Click > Add
 ```
 Select + enter the Object name > type 'domain admins' > Check Names > Ok > Apply > Ok
 ```
-<br/>
 <a href="https://ibb.co/qJpL6Tt"><img src="https://i.ibb.co/rdHK9DC/52.png" alt="52" border="0"></a>
 <br/>
 <br/>
@@ -500,9 +498,7 @@ Sign out to test that it works.
 ```
 Click bottom left > Other user
 ```
-
 Finally enter your username and password credentials.
-<br/>
 <a href="https://ibb.co/tQxYhTc"><img src="https://i.ibb.co/Fm08WLJ/55.png" alt="55" border="0"></a>
 <br/>
 <br/>
