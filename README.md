@@ -521,60 +521,64 @@ connectivity issue. I may have to look into this further.
 <br/>
 <h3>Step 3 - Installing Remote Access Service and Network Address Translation</h3>
 <br/>
-purpose of this is so that our NIC2 Win10 Client can be on the private virtual network and still be able to access
+The purpose of this step is so that our NIC2 Win10 Client can be on the private virtual network and still be able to access
 the internet throught the Domain Controller. It will have a private IP address that can access the public internet.
+
+Let's understand some key terminology first.
 
 RAS = remote access service
 Basically it allows users to connect to a network or computer from a remote location.
-It enables remote access to resources like files and applications
+It enables remote access to resources like files and applications.
 We need the Win10 VM machine to access the internet from its private network.
 
 
 NAT = Network address Translation. 
-It is used in routers.
-It translates a set of IP addresses into another set of IP addresses
-It helps preserve the limited amount of IPv4 public IP addresses
-As there around 4 billion public IP addresses, engineers developed private IP addresses and network address translation
+NAT is used in routers.
+It translates a set of IP addresses into another set of IP addresses.
+It helps preserve the limited amount of IPv4 public IP addresses.
+As there are around 4 billion public IP addresses, engineers developed private IP addresses and network address translation.
 
 There are two different types of IPv4 addresses.
-Public and Private
-Public IP addresses are publicly registered on the internet
+Public and Private IP addresses.
+Public IP addresses are publicly registered on the internet.
 We need a public IP address to go on the internet. 
 
-Private IP addresses are not publicly registered
-So we cant directly access the internet with a private address.
-Only used internally.
+Private IP addresses are not publicly registered.
+So we can't directly access the internet with a private address.
+We use private IP addresses for internal networks.
 
-You will usually have multiple devices on a private network. So chances are you will have to have a public IP 
-address to access the internet.
+Usually, there are multiple devices on a private network. 
+So chances are, you will have to have a public IP address to access the internet.
 
 So in NAT our router will assign each device in our private network a private IP address. 
 So when one of our device needs to connect to the internet, it will send the private IP address to the router.
 The router will then use NAT to translate the private IP address into the public IP address.
-That’s it!
+That’s it in a nutshell!
 
-So NAT:
-translates a set of IP addresses into another set of IP addresses - aka Private to Public
-but it also translate Public to private
+So to recap NAT translates a set of IP addresses into another set of IP addresses - 
+aka Private to Public but it can also translate public to private.
 
 However we wont need NAT or private IP addresses.
-This is due to IPv6
+
+This is due to IPv6.
 Every device will have its own public IP address
 Why? IPv6 can produce 340 undecillion IP addresses --> 340 with 36 digits after it
-
 
 Now lets start installing RAS and NAT on our Domain Controller
 We are already logged in as our Admin User Robert Lee
 
 Server Manager
-Click > Roles and Features
 
-<br/>
+```
+Click > Roles and Features
+```
 <a href="https://ibb.co/cbmNSRq"><img src="https://i.ibb.co/wJvKF8t/57.png" alt="57" border="0"></a>
 <br/>
 <br/>
+
+```
 Click > Next
-<br/>
+```
 <br/>
 <a href="https://ibb.co/Yp69Fy6"><img src="https://i.ibb.co/LnMwXJM/58.png" alt="58" border="0"></a>
 <br/>
