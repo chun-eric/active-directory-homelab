@@ -470,7 +470,7 @@ Click > Finish
 In the _Admin folder you can see our new user Robert Lee but we have to make him the admin.
 
 ```
-Right click on Rober Lee > Properties 
+Right click on Robert Lee > Properties 
 ```
 <a href="https://ibb.co/nPyVdj1"><img src="https://i.ibb.co/WVXd8fz/51.png" alt="51" border="0"></a>
 <br/>
@@ -502,9 +502,10 @@ Finally enter your username and password credentials.
 <a href="https://ibb.co/tQxYhTc"><img src="https://i.ibb.co/Fm08WLJ/55.png" alt="55" border="0"></a>
 <br/>
 <br/>
-Okay, now you can log into your domain admin account.
-However I was getting a network issue. It is saying that I have no internet connection. (see bottom right)
-Currently I am on a NAT. But maybe I need to set it to a bridged adapter. 
+Okay, now we can log into our domain admin account.
+However we were getting a network issue. It was saying that I had no internet connection. (see bottom right)
+On virtual box, I was intially on a NAT adapter but changed it to a bridged adapter. That solved our 
+connectivity issue. I may have to look into this further.
 <br/>
 <a href="https://ibb.co/pwLD7xC"><img src="https://i.ibb.co/XLCBQbm/56.png" alt="56" border="0"></a>
 <br/>
