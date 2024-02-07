@@ -1300,16 +1300,20 @@ We can also connect to the internet.
 </br>
 <h3>Step 6 - Project Conclusion and Summary</h3>
 <br/>
-This project would replicate a mini corporate network for a small to medium sized business.
+This Active Directory Home Lab project would replicate a mini corporate network for a small to medium sized business.
 
 <br/>
-Imagine a new staff being hired, we create a new user via a script, assign a new account through a Domain Controller.
-The new hire would login with their corporate credentials onto a laptop in the domain we created. 
-All internet traffic would be directed through a domain controller. 
+<br/>
+Imagine a new staff being hired to a company. We can create a new user via a script, assign a new account through a Domain Controller.
 
+<br/>
+<br/>
+The new hire would login with their corporate credentials onto a laptop in the domain we created. 
+All internet traffic would then be directed through a domain controller. 
+<br/>
 <br/>
 This concludes the project.
-
+<br/>
 <br/>
 Thank you for reading the project until the end.
 <br/>
