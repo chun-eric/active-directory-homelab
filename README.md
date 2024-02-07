@@ -1,4 +1,3 @@
-![image](https://github.com/chun-eric/active-directory-homelab/assets/102393871/f999a414-04b9-4641-96bd-72041bfa6e1b)
 <h1>Microsoft Active Directory Home Lab</h1>
 
 
