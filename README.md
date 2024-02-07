@@ -2,7 +2,7 @@
 
 
 <h2>Description</h2>
-A project that sets up an active directory domain controller in a virtual environment that is connected to a local private network with local windows machine connected to it.
+A project that sets up an active directory domain controller in a virtual environment that is connected to a local private network with local windows machine connected to it. This project aims to try and mimic a typical on-premise local corporate network on Active Directory that would require onboarding of new staff members. We would also aim to create a thousand fake employees registered to an Organizational Unit via a Powershell script.
 <br />
 
 
