@@ -1,4 +1,4 @@
-
+![image](https://github.com/chun-eric/active-directory-homelab/assets/102393871/f999a414-04b9-4641-96bd-72041bfa6e1b)
 <h1>Microsoft Active Directory Home Lab</h1>
 
 
@@ -976,106 +976,121 @@ Fantastic!
 </br>
 </br>
 <h3>Step 4 - Creating 1000 Random Fake Active Directory Users with Powershell</h3>
-<br/>
-<br/>
-Before we create our Client VM
-We will create a whole bunch of fake random users with a Powershell Script
+
+Before we create our Client VM, we will create a whole bunch of fake random users with a Powershell Script
 We now need to access the internet for the Server
 As it is a home lab environment we can configure the server to access the internet but usually we wouldn’t do 
 that in a production environment
 
 
+In Server Manager Dashboard: 
 
-In Server Manager Dashboard 
-
-Click Configure this local server.
-<br/>
+```
+Click > Configure this local server
+```
 <a href="https://ibb.co/71Ys9Vp"><img src="https://i.ibb.co/HHF5JYP/99.png" alt="99" border="0"></a>
-<br/>
-<br/>
-
 <br/>
 <br/>
 <a href="https://ibb.co/VTVHNKL"><img src="https://i.ibb.co/1TZsnS0/100.png" alt="100" border="0"></a>
 <br/>
 <br/>
+
+```
 IE Enhanced Security Configuration > Off
-<br/>
-<br/>
+```
 <a href="https://ibb.co/c3Jn8PN"><img src="https://i.ibb.co/bm19vxr/101.png" alt="101" border="0"></a>
 <br/>
 <br/>
-Go to the internet and download the zipped script file
-Save it on desktop and extract it on the desktop
-<br/>
+We won't be writing this script from scratch but downloading it off the Internet.
+However we will be explaining each line of code to fully understand it.
+
+Download the zipped script file.
+Save it on desktop and extract it on the desktop.
 <br/>
 <a href="https://ibb.co/Zc82BS7"><img src="https://i.ibb.co/KVqK2DS/102.png" alt="102" border="0"></a>
 <br/>
 <br/>
-Inside the folder we see the scripts and the names txt file. 
-The names text file has around 1000 generated names but in text file format
+Inside the folder we see the scripts and the names.txt file. 
+The names.txt file has around 1000 generated names but in text file format.
 <br/>
 <br/>
 <a href="https://ibb.co/7rBctZm"><img src="https://i.ibb.co/RQtnTsw/103.png" alt="103" border="0"></a>
 <br/>
 <br/>
-Next we have to go PowerShell ISE (integrated Scripting Environment)
-and run as adminstrator.
+Next, open PowerShell ISE (integrated Scripting Environment) and run as adminstrator.
 <br/>
 <br/>
 <a href="https://ibb.co/88ptsN9"><img src="https://i.ibb.co/LpWHRY1/104.png" alt="104" border="0"></a>
 <br/>
 <br/>
+
+```
 Open the PowerShell Script > 1_CREATE_USERS
-<br/>
-<br/>
+```
 <a href="https://ibb.co/mB7ZGDt"><img src="https://i.ibb.co/QcGSfbn/105.png" alt="105" border="0"></a>
 <br/>
 <br/>
-Now our script has opened
+Now our script has opened.
 <br/>
 <br/>
 <a href="https://ibb.co/ZG71m8x"><img src="https://i.ibb.co/8Nt4c59/106.png" alt="106" border="0"></a>
 <br/>
 <br/>
-Before we run anything we have to enable the execution of all scripts
-If I try to run the script now 
-we get an error
+Before we run anything, we have to enable the execution of all scripts.
+If we try to run the script now, we will get an error.
 <br/>
 <br/>
 <a href="https://ibb.co/Kh9FQKK"><img src="https://i.ibb.co/XLzSdYY/107.png" alt="107" border="0"></a>
 <br/>
 <br/>
-We need to change the execution policy for PowerShell scripts on a system
-It’s a security feature in PowerShell that determines whether scripts are allowed to run and what kind of scripts are allowed
+We need to change the execution policy for PowerShell scripts on a system.
 
-Type > Set-ExecutionPolicy Unrestricted 
-We change the user preference for PowerShell script execution policy
-and allow PowerShell scripts to run without restrictions
+It’s a security feature in PowerShell that determines whether scripts are allowed to run and what kind of scripts are allowed.
 
+```
+Type > Set-ExecutionPolicy Unrestricted
+```
+
+We need to change the user preference for PowerShell script execution policy
+and allow PowerShell scripts to run without restrictions.
+
+```
 Click > Yes to All
-<br/>
-<br/>
+```
 <a href="https://ibb.co/gjkPmKD"><img src="https://i.ibb.co/1vFd7W9/108.png" alt="108" border="0"></a>
 <br/>
 <br/>
-Explaining the code
+Let's explain the code line by line.
 
 Setting Variables
+
+```
 $PASSWORD_FOR_USERS   = "Password1"
-This line initializes a variable named $PASSWORD_FOR_USERS and assigns the string "Password1" to it. This will be the default password for all users created later in the script.
+```
+This line initializes a variable named $PASSWORD_FOR_USERS and assigns the string "Password1" to it. 
+This will be the default password for all users created later in the script.
 
+```
 $USER_FIRST_LAST_LIST = Get-Content .\names.txt
-This line reads the content of a file named names.txt and stores it in the variable $USER_FIRST_LAST_LIST. Each line in the file is expected to contain a first name and a last name separated by a space.
+```
+This line reads the content of a file named names.txt and stores it in the variable $USER_FIRST_LAST_LIST. 
+Each line in the file is expected to contain a first name and a last name separated by a space.
 
+```
 $password = ConvertTo-SecureString $PASSWORD_FOR_USERS -AsPlainText -Force
-This line converts the plain text password stored in $PASSWORD_FOR_USERS into a secure string and assigns it to the variable $password. This is done to securely handle passwords in PowerShell.
+```
+This line converts the plain text password stored in $PASSWORD_FOR_USERS into a secure string and assigns it to the variable $password. 
+This is done to securely handle passwords in PowerShell.
 
+```
 New-ADOrganizationalUnit -Name _USERS -ProtectedFromAccidentalDeletion $false
-This line creates a new Active Directory Organizational Unit (OU) named "_USERS" with the parameter -ProtectedFromAccidentalDeletion set to $false. This OU will be the container for the new user accounts.
+```
+This line creates a new Active Directory Organizational Unit (OU) named "_USERS" with the parameter -ProtectedFromAccidentalDeletion set to $false. 
+This Organizational Unit will be the container for the new user accounts.
 
-
+```
 foreach ($n in $USER_FIRST_LAST_LIST) {
+```
 This line starts a foreach loop that iterates through each line in the $USER_FIRST_LAST_LIST variable, where each line is expected to contain a first name and a last name separated by a space. That is it will iterate through each user in the list
 
     $first = $n.Split(" ")[0].ToLower()
@@ -1100,36 +1115,31 @@ This line prints a message to the console indicating the username that is curren
 This line creates a new Active Directory user using the New-AdUser cmdlet. It sets various properties such as the account password, given name, surname, display name, name, employee ID, and other attributes. The user account is placed in the "_USERS" OU, and the account is enabled (-Enabled $true).
 
 
-
 Now that we understand general gist of the code. 
-We need to cd into the directory of the names.txt file
-
-<br/>
-<br/>
+We need to cd into the directory of the names.txt file.
 <a href="https://ibb.co/sVgZz4K"><img src="https://i.ibb.co/3CTnQbp/109a.png" alt="109a" border="0"></a>
 <br/>
 <br/>
-Check with ls command
+Check with the ls command.
 <br/>
 <a href="https://ibb.co/5GfwbWd"><img src="https://i.ibb.co/xXRdxSy/109b.png" alt="109b" border="0"></a>
 <br/>
 <br/>
-
-Now all we need to do is run the script
-Now you can see it running the script and creating users
+All we need to do is run the script. 
+You can see it running the script and creating the random users.
+Very cool.
 <br/>
 <br/>
 <a href="https://ibb.co/fkRtGX3"><img src="https://i.ibb.co/8r324my/110.png" alt="110" border="0"></a>
 <br/>
 <br/>
-If we check our Active Directory and our Domain
-We can see that our _USERS folders have been created with other 1000 users inside it
+If we check our Active Directory and our Domain, we can see that our _USERS folders have been created with 1000 users inside.
 <br/>
 <br/>
 <a href="https://ibb.co/VY3mFcM"><img src="https://i.ibb.co/N27S0dW/111.png" alt="111" border="0"></a>
 <br/>
 <br/>
-If we search for Robert Lee we can see that our user has been created.
+If we search for a "Robert Lee" we can see that our user has been created.
 <br/>
 <br/>
 <a href="https://ibb.co/LnsVkDk"><img src="https://i.ibb.co/hDT37x7/112.png" alt="112" border="0"></a>
