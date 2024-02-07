@@ -520,7 +520,6 @@ connectivity issue. I may have to look into this further.
 <br/>
 <br/>
 <h3>Step 3 - Installing Remote Access Service and Network Address Translation</h3>
-<br/>
 The purpose of this step is so that our NIC2 Win10 Client can be on the private virtual network and still be able to access
 the internet throught the Domain Controller. It will have a private IP address that can access the public internet.
 
@@ -567,7 +566,7 @@ Why? IPv6 can produce 340 undecillion IP addresses --> 340 with 36 digits after 
 Now lets start installing RAS and NAT on our Domain Controller
 We are already logged in as our Admin User Robert Lee
 
-Server Manager
+In the Server Manager:
 
 ```
 Click > Roles and Features
@@ -579,114 +578,120 @@ Click > Roles and Features
 ```
 Click > Next
 ```
-<br/>
 <a href="https://ibb.co/Yp69Fy6"><img src="https://i.ibb.co/LnMwXJM/58.png" alt="58" border="0"></a>
 <br/>
 <br/>
+
+```
 Installation Type > Role Based > Next
-<br/>
-<br/>
+```
 <a href="https://ibb.co/gm66K0Q"><img src="https://i.ibb.co/sbttYTc/59.png" alt="59" border="0"></a>
 <br/>
 <br/>
+
+```
 Server Selection > DomainController.mydomain.com > Next
-<br/>
-<br/>
+```
 <a href="https://ibb.co/GxFsnMD"><img src="https://i.ibb.co/HFXNBPy/60.png" alt="60" border="0"></a>
 <br/>
 <br/>
+
+```
 Server Roles > Remote Access > Next
-<br/>
-<br/>
+```
 <a href="https://ibb.co/1vDDV52"><img src="https://i.ibb.co/Wxbb9wK/61.png" alt="61" border="0"></a>
 <br/>
 <br/>
 <a href="https://ibb.co/FH2Xvfz"><img src="https://i.ibb.co/KKdDZQW/62.png" alt="62" border="0"></a>
 <br/>
 <br/>
+
+```
 Role Services > Select Routing & DirectAccess and VPN (RAS) > Next
-<br/>
-<br/>
+```
 <a href="https://ibb.co/wBgNNgG"><img src="https://i.ibb.co/xXLSSL9/63.png" alt="63" border="0"></a>
 <br/>
 <br/>
-Web Server Role > Next 
-<br/>
-<br/>
+
+```
+Web Server Role > Next
+```
 <a href="https://ibb.co/tZQf1vw"><img src="https://i.ibb.co/8zN3Qfn/64.png" alt="64" border="0"></a>
 <br/>
 <br/>
-Confirmation > Install
-Close
-<br/>
-<br/>
+
+```
+Confirmation > Install > Close
+```
 <a href="https://ibb.co/pK5Mj6j"><img src="https://i.ibb.co/PW0PGsG/65.png" alt="65" border="0"></a>
 <br/>
 <br/>
-Now that the role installed we need to configure and enable routing and remote access
+Now that the role is installed, we need to configure and enable routing and remote access.
 
-
+```
 Server Manager Dashboard > Tools > Routing and Remote Access
-<br/>
-<br/>
+```
 <a href="https://ibb.co/xGWg86S"><img src="https://i.ibb.co/L6mgh1z/66.png" alt="66" border="0"></a>
 <br/>
 <br/>
-Select DC  (local)
+Select DC  (local).
+
+```
 Right click > Configure and Enable Routing and Remote Access > Next
-<br/>
-<br/>
+```
 <a href="https://ibb.co/ZXY7wss"><img src="https://i.ibb.co/DW8T6XX/67.png" alt="67" border="0"></a>
 <br/>
 <br/>
+
+```
 Select Network Address Translation (NAT) > Next
-<br/>
-<br/>
+```
 <a href="https://ibb.co/2sZh8cd"><img src="https://i.ibb.co/7RkCgrK/68.png" alt="68" border="0"></a>
 <br/>
 <br/>
+
+```
 Select our Internet facing Network Interface > Next > Finish
-<br/>
-<br/>
+```
 <a href="https://ibb.co/fD8cLgn"><img src="https://i.ibb.co/FHsPCr0/69.png" alt="69" border="0"></a>
 <br/>
 <br/>
-Now our Domain Controller is green 
-We have configures our Domain Controller
-<br/>
+Now our Domain Controller is green and that means we have configured our Domain Controller.
 <br/>
 <a href="https://ibb.co/BZ6YDM0"><img src="https://i.ibb.co/zR2tcvq/70.png" alt="70" border="0"></a>
 <br/>
 <br/>
 Next step is to set up a DHCP Server on our Domain Controller.
 Why is this necessary?
-It provides automatic IP address assignment
-It simplies network administration
-It dynamically allocates IP address to devices that join the network 
-It reduces config errors
-It enhances security
+It provides automatic IP address assignment.
+It simplies network administration.
+It dynamically allocates IP addresses to devices that join the network. 
+It reduces configuration errors.
+It enhances security.
 
 
-Every computer or device has to have an IP address
-There 2 ways that a computer can be assigned an IP address
-A static IP or dynamic IP
+Every computer or device has to have an IP address.
+There two ways that a computer can be assigned an IP address.
+A static IP or dynamic IP.
 
-Static IP = user assigns IP address manually
-This was originally done all manually. You couldn’t also assign two same IP addresses or it would cause IP conflict
+Static IP = user assigns IP address manually.
+This was originally done manually. You also couldn’t assign two same IP addresses or it would cause IP conflict.
 
-You also had to add:
-Subnet mask
-Default gateway
-DNS Server 
+We have to add a:
+<br/>
+- Subnet mask
+- Default gateway
+- DNS Server 
 <br/>
 <br/>
 <a href="https://ibb.co/9VgJV0H"><img src="https://i.ibb.co/k9Bp9T2/71.png" alt="71" border="0"></a>
 <br/>
 <br/>
-DHCP solves this by assigning dynamic IP addresses
-A dynamic IP is where a computer gets an IP address from a DHCP server
+A DHCP solves this by assigning dynamic IP addresses.
+A dynamic IP is where a computer gets an IP address from a DHCP server.
 
 DHCP server automatically assigns a computer:
+<br/>
 IP address
 Subnet mask
 Default gateway
