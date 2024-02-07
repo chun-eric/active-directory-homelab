@@ -1155,15 +1155,15 @@ If we search for a "Robert Lee" we can see that our user has been created.
 <br>
 </br>
 <h3>Step 5 - Enabling User Entity Behavior Analytics and Playbooks  </h3>
-<br/>
-Go through the same process of creating a VM but for Windows 10 Pro ISO
+Go through the same process of creating a VM but for Windows 10 Pro ISO.
 <br/>
 <a href="https://ibb.co/jGS27Xg"><img src="https://i.ibb.co/J294XJ5/113.png" alt="113" border="0"></a>
 <br/>
 <br/>
+
+```
 We will set our Network > Internal Network
-<br/>
-<br/>
+```
 <a href="https://ibb.co/tq7m1mM"><img src="https://i.ibb.co/zXyntnh/114.png" alt="114" border="0"></a>
 <br/>
 <br/>
