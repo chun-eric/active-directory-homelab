@@ -1167,43 +1167,48 @@ We will set our Network > Internal Network
 <a href="https://ibb.co/tq7m1mM"><img src="https://i.ibb.co/zXyntnh/114.png" alt="114" border="0"></a>
 <br/>
 <br/>
+
+```
 Choose Windows 10 Pro
+```
+
+```
 Custom Install
-<br/>
-<br/>
+```
 <a href="https://ibb.co/tChX0dv"><img src="https://i.ibb.co/VBNmFKz/115.png" alt="115" border="0"></a>
 <br/>
 <br/>
+
+```
 Input user to this PC
-<br/>
-<br/>
+```
 <a href="https://ibb.co/DYG5FXj"><img src="https://i.ibb.co/nB3zy2K/116.png" alt="116" border="0"></a>
 <br/>
 <br/>
-No password
+No password.
 <br/>
 <br/>
 <a href="https://ibb.co/NsGz4Fx"><img src="https://i.ibb.co/7X0F9Sv/117.png" alt="117" border="0"></a>
 <br/>
 <br/>
-Now we are logged into our Window 10 Client
+Now we are logged into our Window 10 Client.
 <br/>
 <br/>
 <a href="https://ibb.co/HXg1NZM"><img src="https://i.ibb.co/hC8hX0n/118.png" alt="118" border="0"></a>
 <br/>
 <br/>
-Now to see if we are connected to the internet
-Go to cmd
+Now to see if we are connected to the Internet.
+Go to cmd:
+
+```
 type > ipconfig
+```
 
-If you can see default gateway address the same as the DC IP address of 172.16.0.1 then we are all connected!
-
-<br/>
-<br/>
+If you can see default gateway address the same as the DC IP address of 172.16.0.1, then we are all connected!
 <a href="https://ibb.co/PTwXrwJ"><img src="https://i.ibb.co/z8G9mGC/119.png" alt="119" border="0"></a>
 <br/>
 <br/>
-Lets ping our domain mydomain.com
+Lets ping our domain mydomain.com.
 
 Everything seems to be working! Woohoo!
 <br/>
@@ -1211,67 +1216,78 @@ Everything seems to be working! Woohoo!
 <a href="https://ibb.co/rkyTNtn"><img src="https://i.ibb.co/NxYQb3w/120.png" alt="120" border="0"></a>
 <br/>
 <br/>
-Lets also change the name of the computer
-system > Rename this PC (advanced)
-<br/>
-<br/>
+Lets also change the name of the computer.
+
+```
+System > Rename this PC (advanced).
+```
 <a href="https://ibb.co/SrQqCkz"><img src="https://i.ibb.co/dgbnYNR/121.png" alt="121" border="0"></a>
 <br/>
 <br/>
- Click > Change
 
+```
+Click > Change
+```
+
+```
 Change Computer Name > CLIENT1
+```
+
 Member of Domain: 
 <br/>
 <br/>
 <a href="https://ibb.co/n0vVNX6"><img src="https://i.ibb.co/hMjnJGL/122.png" alt="122" border="0"></a>
 <br/>
 <br/>
-our admin username and password robert lee
+Our admin username and password robert lee.
 <br/>
 <br/>
 <a href="https://ibb.co/5rPK8w0"><img src="https://i.ibb.co/0CxsMv7/123.png" alt="123" border="0"></a>
 <br/>
 <br/>
-If you go back to our Server Manager Dashboard > DHCP
-We can see under IPv4 > Scope > Address Leases> CLIENT1.mydomain 
+If you go back to our:
 
-There is our CLIENT1 machine being leased
-<br/>
+```
+Server Manager Dashboard > DHCP
+```
+We can see under:
+
+```
+IPv4 > Scope > Address Leases> CLIENT1.mydomain
+```
+
+There is our CLIENT1 machine being leased.
 <br/>
 <a href="https://ibb.co/hL0S3pM"><img src="https://i.ibb.co/Bck908P/124.png" alt="124" border="0"></a>
 <br/>
 <br/>
-Our new computer is also showing in our Active Directory Users and Computers within the DC
+Our new computer is also showing in our Active Directory Users and Computers within the DC.
 <br/>
 <br/>
 <a href="https://ibb.co/chgnXKP"><img src="https://i.ibb.co/23n4Y0w/125.png" alt="125" border="0"></a>
 <br/>
 <br/>
-Lets logout and login as one of our other users in our CLIENT1 machine
-Click Other user
-<br/>
+Lets logout and login as one of our other users in our CLIENT1 machine.
+
+Click Other user.
 <br/>
 <a href="https://ibb.co/v40YtmP"><img src="https://i.ibb.co/d48gh62/126.png" alt="126" border="0"></a>
 <br/>
 <br/>
-Lets sign in as one of the random users we created
+Lets sign in as one of the random users we created.
 
 acoke
 Password1
-<br/>
 <br/>
 <a href="https://ibb.co/tbpnyr3"><img src="https://i.ibb.co/LCdB47v/127.png" alt="127" border="0"></a>
 <br/>
 <br/>
 We are logged into as the new user!
 <br/>
-<br/>
 <a href="https://ibb.co/2q10pn3"><img src="https://i.ibb.co/rkRKX72/128.png" alt="128" border="0"></a>
 <br/>
 <br/>
 We can also connect to the internet.
-<br/>
 <br/>
 <a href="https://ibb.co/G7S2H04"><img src="https://i.ibb.co/ZdD82Vp/129.png" alt="129" border="0"></a>
 <br/>
@@ -1285,13 +1301,17 @@ We can also connect to the internet.
 <h3>Step 6 - Project Conclusion and Summary</h3>
 <br/>
 This project would replicate a mini corporate network for a small to medium sized business.
+
+<br/>
 Imagine a new staff being hired, we create a new user via a script, assign a new account through a Domain Controller.
 The new hire would login with their corporate credentials onto a laptop in the domain we created. 
 All internet traffic would be directed through a domain controller. 
 
+<br/>
 This concludes the project.
 
-Thank you for reading until the end.
+<br/>
+Thank you for reading the project until the end.
 <br/>
 <br/>
 <br/>
