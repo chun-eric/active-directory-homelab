@@ -1276,9 +1276,13 @@ Click Other user.
 <br/>
 Lets sign in as one of the random users we created.
 
-acoke
-Password1
-<br/>
+```
+Username > acoke
+```
+
+```
+Password > [enter password]
+```
 <a href="https://ibb.co/tbpnyr3"><img src="https://i.ibb.co/LCdB47v/127.png" alt="127" border="0"></a>
 <br/>
 <br/>
@@ -1299,7 +1303,6 @@ We can also connect to the internet.
 <br>
 </br>
 <h3>Step 6 - Project Conclusion and Summary</h3>
-<br/>
 This Active Directory Home Lab project would replicate a mini corporate network for a small to medium sized business.
 
 <br/>
