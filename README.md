@@ -1269,8 +1269,9 @@ Our new computer is also showing in our Active Directory Users and Computers wit
 <br/>
 Lets logout and login as one of our other users in our CLIENT1 machine.
 
-Click Other user.
-<br/>
+```
+Click > Other user
+```
 <a href="https://ibb.co/v40YtmP"><img src="https://i.ibb.co/d48gh62/126.png" alt="126" border="0"></a>
 <br/>
 <br/>
