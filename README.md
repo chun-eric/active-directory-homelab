@@ -560,8 +560,8 @@ aka Private to Public but it can also translate public to private.
 However we wont need NAT or private IP addresses.
 
 This is due to IPv6.
-Every device will have its own public IP address
-Why? IPv6 can produce 340 undecillion IP addresses --> 340 with 36 digits after it
+Every device will have its own public IP address.
+Why? IPv6 can produce 340 undecillion IP addresses. That's 340 with 36 digits after it
 
 Now lets start installing RAS and NAT on our Domain Controller
 We are already logged in as our Admin User Robert Lee
@@ -689,29 +689,30 @@ We have to add a:
 <br/>
 A DHCP solves this by assigning dynamic IP addresses.
 A dynamic IP is where a computer gets an IP address from a DHCP server.
-
+<br/>
 DHCP server automatically assigns a computer:
 <br/>
-IP address
-Subnet mask
-Default gateway
-DNS Server
+- IP address
+- Subnet mask
+- Default gateway
+- DNS Server
 <br/>
 <br/>
 <a href="https://ibb.co/CHYcBSB"><img src="https://i.ibb.co/Vqz1VkV/72.png" alt="72" border="0"></a>
 <br/>
 <br/>
-You can confirm all the DHCP server settings that is given to our computer in windows command prompt
-type
+You can confirm all the DHCP server settings that is given to our computer in windows command prompt.
+Type:
+
+```
 Ipconfig /all
-<br/>
+```
 <br/>
 <a href="https://ibb.co/qx0Z6pX"><img src="https://i.ibb.co/N714RKQ/73.png" alt="73" border="0"></a>
 <br/>
 <br/>
-A DHCP Server assigns IP addresses from its scope
-Scope is a range of IP addresses that a DHCP server can hand out.
-Start IP address to End IP address
+A DHCP Server assigns IP addresses from its scope.
+A scope is a range of IP addresses that a DHCP server can hand outStart -- a Start IP address to End IP address.
 
 Example below the DHCP Server can hand out around 100 IP addresses
 <br/>
@@ -719,258 +720,248 @@ Example below the DHCP Server can hand out around 100 IP addresses
 <a href="https://ibb.co/CmGmKww"><img src="https://i.ibb.co/q7Q7YDD/74.png" alt="74" border="0"></a>
 <br/>
 <br/>
-The DHCP server assigns the IP address as a lease
-The computer actually doesn’t own the IP address
-A lease is the amount of time an IP address is assigned to a computer
+The DHCP server assigns the IP address as a lease.
+The computer actually doesn’t own the IP address.
+A lease is the amount of time an IP address is assigned to a computer.
+
 Why leasing?
-Its to make sure the DHCP Server doesn’t run out of IP addresses
+
+It is to make sure the DHCP Server doesn’t run out of IP addresses.
 <br/>
 <br/>
 <a href="https://ibb.co/KL701Sh"><img src="https://i.ibb.co/s6QmBzR/75.png" alt="75" border="0"></a>
 <br/>
 <br/>
-Also what if one of the computers is removed if it is not leased. 
+Also what if one of the computers is removed, if it is not leased. 
 Then that computer will actually take the IP address with it.
 
-Imagine a new computer is added to the network
-It cannot access the network as the DHCP Server has run out of IP addresses
+Imagine a new computer is added to the network.
+It cannot access the network as the DHCP Server has run out of IP addresses.
 
-Hence the reason DHCP leases IP addresses not gives it.
-The DHCP server will know which ones are available to use and which IP addresses are being used
+Hence the reason DHCP leases IP addresses.
+The DHCP server will know which ones are available to use and which IP addresses are being used.
 
-Also the computers and the devices on the network will renew their leases to the DHCP Server
+Also the computers and the devices on the network will renew their leases to the DHCP Server.
 <br/>
 <br/>
 <a href="https://ibb.co/Dp4qKf5"><img src="https://i.ibb.co/py2mXjJ/76.png" alt="76" border="0"></a>
 <br/>
 <br/>
-If you want a computer or device to have a specific IP address (IP reservation) all the time
-you can create an Address Reservation on the DHCP Server
-A reservation ensures that a specific computer or device will always be given the same IP address
+If you want a computer or device to have a specific IP address (IP reservation) all the time,
+you can create an Address Reservation on the DHCP Server.
 
-Reservations are typically given to special devices or computers such as network printers, servers, routers
+A reservation ensures that a specific computer or device will always be given the same IP address.
+
+Reservations are typically given to special devices or computers such as network printers, servers, routers.
 <br/>
 <br/>
 <a href="https://ibb.co/NsyjRKH"><img src="https://i.ibb.co/f2xpJHP/77.png" alt="77" border="0"></a>
 <br/>
 <br/>
-DHCP is a service that runs on a server such as Microsoft server or a Linux Server
-Its also a service that runs on routers
+DHCP is a service that runs on a server such as Microsoft server or a Linux Server.
+Its also a service that runs on routers.
 
 
-Okay so back to the project
+Okay, so back to the project.
 
 
+So, a DCHP server will allow our windows 10 client to get a IP address so that it can connect to the internet.
 
+In Server Manager Dashboard:
 
-
-
-So a DCHP server will allow our windows 10 client to get a IP address so that it can connect to the internet
-
-In Server Manager Dashboard
-Click Add roles and features
-
-<br/>
-<br/>
+```
+Click > Add roles and features
+```
 <a href="https://ibb.co/T4Vrx6Y"><img src="https://i.ibb.co/jycHPmb/78.png" alt="78" border="0"></a>
 <br/>
 <br/>
-Click Next for Before you Begin
-<br/>
-<br/>
+
+```
+Click > Next 
+```
 <a href="https://ibb.co/0JX99mC"><img src="https://i.ibb.co/QmcHHpP/79.png" alt="79" border="0"></a>
 <br/>
 <br/>
-Installation Type > Role Based or feature based installation > Next 
-<br/>
-<br/>
+
+```
+Installation Type > Role Based or feature based installation > Next
+```
 <a href="https://ibb.co/YBfKwCZ"><img src="https://i.ibb.co/Ld9qHF5/80.png" alt="80" border="0"></a>
 <br/>
 <br/>
+
+```
 Select the correct server > Next
-<br/>
-<br/>
+```
 <a href="https://ibb.co/QFBdvQ7"><img src="https://i.ibb.co/pvDyjw6/81.png" alt="81" border="0"></a>
 <br/>
 <br/>
+
+```
 Server Roles > select DHCP Server > Next
-<br/>
-<br/>
+```
 <a href="https://ibb.co/s693x8Q"><img src="https://i.ibb.co/TbMhj9R/82.png" alt="82" border="0"></a>
 <br/>
 <br/>
+
+```
 Features > Next
+```
+
+```
 DHCP > Next
+```
+
+```
 Click > Install
-<br/>
-<br/>
+```
 <a href="https://ibb.co/gjYHQxG"><img src="https://i.ibb.co/vw9gfSb/83.png" alt="83" border="0"></a>
 <br/>
 <br/>
+
+```
 In Server Manager Dashboard > Tools > DHCP
-<br/>
-<br/>
+```
 <a href="https://ibb.co/GTxG7zh"><img src="https://i.ibb.co/16vBZFS/84.png" alt="84" border="0"></a>
 <br/>
 <br/>
-We need to create a scope for the DHCP 
+We need to create a scope for the DHCP.
+
+```
 Right click IPv4 > Select New Scope > Next
-<br/>
-<br/>
+```
 <a href="https://ibb.co/gTS4yhX"><img src="https://i.ibb.co/G2WH7N1/85.png" alt="85" border="0"></a>
 <br/>
 <br/>
-Usually you can name the Scope after the IP range
-Click Next
-<br/>
+Usually, you can name the Scope after the IP range.
+
+```
+Click > Next
+```
 <a href="https://ibb.co/hsVCVX5"><img src="https://i.ibb.co/NxK7K1h/86.png" alt="86" border="0"></a>
 <br/>
 <br/>
-Adding the Start and End IP address
-And changing the Length to 24
+Adding the Start and End IP address.
+And changing the Length to 24. 
 
 The Subnet Mask is automatically calculated.
-I really don’t know how the subnet mask is calculated. I need to watch a video on this. 
 
-You must do research!
+The subnet mask determines the network portion and host portion of an IP address. 
+In our case, for a /24 subnet:
+
+The first three octets (24 bits) are dedicated to the network.
+The last octet (8 bits) is for host addresses.
+
+So, if we are using the IP range 172.16.0.100 to 172.16.0.200, the subnet mask would be:
+
+255.255.255.0 (or written as /24 in CIDR notation)
 <br/>
 <br/>
 <a href="https://ibb.co/ssN8cdj"><img src="https://i.ibb.co/wpP58Fy/87.png" alt="87" border="0"></a>
 <br/>
 <br/>
-Okay so in ChatGPT
-I asked the following question.
 
-You
-I am configuring a DHCP server with a scope of start address of 172.16.0.100 and end address of 172.16.0.200. I changed the length to 24. What is the Subnet mask? How do i calculate the subnet mask. Why is it even important to calculate the subnet mask? What does the length mean?
+Back to the Project.
 
-Here is Chats reply.
-
-In the context of networking and DHCP configuration, the subnet mask is a critical component. Let's break down your questions:
-
-Subnet Mask Calculation:
-
-The subnet mask determines the network portion and host portion of an IP address. In your case, you mentioned a length of 24, which is commonly denoted as "/24" in CIDR (Classless Inter-Domain Routing) notation.
-
-For a /24 subnet:
-
-The first three octets (24 bits) are dedicated to the network.
-The last octet (8 bits) is for host addresses.
-
-So, if you're using the IP range 172.16.0.100 to 172.16.0.200, the subnet mask would be:
-
-255.255.255.0 (or written as /24 in CIDR notation)
-
-Importance of Subnet Mask:
-
-Network Identification:
-
-The subnet mask helps devices identify which portion of the IP address is the network and which is the host. This is crucial for routing traffic within and between networks.
-Address Assignment:
-
-DHCP uses the subnet mask to determine the range of IP addresses it can allocate to devices on the network.
-Broadcast Domain:
-
-Subnet masks define the boundaries of broadcast domains. Devices within the same subnet can directly communicate with each other without the need for routing.
-Efficient Address Utilization:
-
-Proper subnetting allows for efficient utilization of IP addresses, avoiding wastage and optimizing the allocation of addresses to different subnetworks.
-
-Understanding "Length" or CIDR Notation:
-
-The "length" you mentioned, such as "/24," represents the number of bits set to 1 in the subnet mask.
-In CIDR notation, it specifies how many bits of the IP address belong to the network. For example, a /24 means the first 24 bits are the network, and the remaining 8 bits are for hosts.
-
-In summary, calculating the subnet mask is important for defining the network structure, aiding in efficient IP address allocation, and facilitating proper routing and communication within a network. The "length" or CIDR notation is a shorthand way of expressing the subnet mask and indicating how many bits are allocated for the network.
-
-
-
-
-Moving back to the Project
+```
 Add Exclusions and Delay > Next
-We don’t really need to add any exclusions
+```
 
-<br/>
+We don’t really need to add any exclusions.
 <br/>
 <a href="https://ibb.co/j31M5fF"><img src="https://i.ibb.co/NWHj3Cz/88.png" alt="88" border="0"></a>
 <br/>
 <br/>
-Lease Duration
+Lease Duration.
+
 We know from our previous research on DHCP that lease duration will mean an IP address will be leased to a 
 specific device or computer for a certain amount of time before it is renewed again. 
+
 If the lease duration is not renewed then the DHCP server will cancel the lease.
 That means the IP address assigned to that device or computer will return to the scope of the DHCP server.
 
-So if you running a small café, you would naturally give devices attached to your Wifi network maybe around a 
-2hr lease as an example. 
+As an example, if you are running a small café, you would give devices attached to your Wifi network maybe around a 
+2hr lease.
 
 Because this is a home lab project we will just leave it as 8 days. 
 
+```
 Click > Next
-<br/>
-<br/>
+```
 <a href="https://ibb.co/5kwpdZb"><img src="https://i.ibb.co/423vckh/89.png" alt="89" border="0"></a>
 <br/>
 <br/>
-Configure DHCP Options > Yes
 
-This tells the client which servers to use for DNS, which servers to use for Default Gateway.. Etc
-this will help the client get on the internet.
+```
+Configure DHCP Options > Yes
+```
+
+This tells the client which servers to use for DNS, which servers to use for Default Gateway and so on.
+This will help the client get on the internet.
 <br/>
 <br/>
 <a href="https://ibb.co/9cqm4bJ"><img src="https://i.ibb.co/tQbw2qS/90.png" alt="90" border="0"></a>
 <br/>
 <br/>
 In our project configuration the DC using a RAS/NAT to guide the client to the Internet.
-It uses a NIC2 as a default gateway that receives the clients request before passing it through the DC and to the internet
+It uses a NIC2 as a default gateway that receives the clients request before passing it through the DC and to the internet.
 
 So the default gateway will the Domain Controllers IP address 172.16.0.1 which has NAT configured on it.
+
+```
 Click > Add
-<br/>
-<br/>
+```
 <a href="https://ibb.co/q7zDPXj"><img src="https://i.ibb.co/QpZJ1zQ/91.png" alt="91" border="0"></a>
 <br/>
 <br/>
+
+```
 Click > Next
-<br/>
-<br/>
+```
 <a href="https://ibb.co/vP2prYv"><img src="https://i.ibb.co/Z8y5wm1/92.png" alt="92" border="0"></a>
 <br/>
 <br/>
-For Domain Name and DNS Servers
-Active Directory automatically installs it in the DC
+For Domain Name and DNS Servers.
+Active Directory automatically installs it in the DC.
 <br/>
 <br/>
 <a href="https://ibb.co/kDHzCz5"><img src="https://i.ibb.co/LgkB7BY/93.png" alt="93" border="0"></a>
 <br/>
 <br/>
+
+```
 WINS Servers > Next
-WINS Servers are old 
+```
+
+WINS Servers are pretty old.
 <br/>
 <br/>
 <a href="https://ibb.co/3SbG8x7"><img src="https://i.ibb.co/SVgW1kP/94.png" alt="94" border="0"></a>
 <br/>
 <br/>
+
+```
 Click > Next > Finish
-<br/>
-<br/>
+```
 <a href="https://ibb.co/qCQ63sV"><img src="https://i.ibb.co/KDvnpqS/95.png" alt="95" border="0"></a>
 <br/>
 <br/>
+
+```
 Right click DHCP Server > Authorize
-<br/>
-<br/>
+```
 <a href="https://ibb.co/S7LYjyX"><img src="https://i.ibb.co/1JSygQf/96.png" alt="96" border="0"></a>
 <br/>
 <br/>
+
+```
 Right click DHCP Server > Refresh
-<br/>
-<br/>
+```
 <a href="https://ibb.co/mv2RymT"><img src="https://i.ibb.co/9w1p4Jg/97.png" alt="97" border="0"></a>
 <br/>
 <br/>
-Now we have our DHCP Server setup!
-Awesome!
+Now we have our DHCP Server setup! 
+Fantastic!
 <br/>
 <br/>
 <a href="https://ibb.co/PrJFzs7"><img src="https://i.ibb.co/S6H57Dh/98.png" alt="98" border="0"></a>
